@@ -1,4 +1,4 @@
-package epl361_FinalProject;
+package Project;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -56,50 +56,74 @@ public class AdminPanel extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblAdminpanel = new JLabel("AdminPanel");
-		lblAdminpanel.setFont(new Font("Tahoma",  Font.ITALIC, 16));
-		lblAdminpanel.setBounds(134, 21, 136, 47);
+		JLabel lblAdminpanel = new JLabel("Orphanou Nicos Estates System");
+		lblAdminpanel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
+		lblAdminpanel.setBounds(127, 21, 288, 47);
 		contentPane.add(lblAdminpanel);
 		
 		JButton btnNewButton = new JButton("View Webpage");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				try { 
+	
+			//public void actionPerformed(ActionEvent e) {
+			btnNewButton.addActionListener(new ActionListener() {	
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						
+						Webpage info = new Webpage();		
+						info.setVisible(true);
+					}
+				});
+				
+				/*try { 
 			         String url = "http://eriakouppari97.mozello.com/";
 			         java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
 			       }
 			       catch (java.io.IOException ex) {
 			           System.out.println(ex.getMessage());
-			       }
-			}
-		});
-		btnNewButton.setBounds(102, 75, 199, 48);
+			       }*/
+		
+		btnNewButton.setBounds(36, 79, 199, 48);
 		contentPane.add(btnNewButton);
 		
 		JButton button = new JButton("Notifications");
-		button.setBounds(102, 134, 199, 48);
+		button.setBounds(283, 75, 199, 48);
 		contentPane.add(button);
 		
-		JButton button_1 = new JButton("Search");
-		button_1.setBounds(102, 190, 199, 48);
+		JButton button_1 = new JButton("Statistics");
+		button_1.setBounds(36, 134, 199, 48);
 		contentPane.add(button_1);
-		
-	
-			
-		JButton button_2 = new JButton("Information");		
-		button_2.addActionListener(new ActionListener() {	
+		button_1.addActionListener(new ActionListener() {	
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				
+				Statistics info = new Statistics();		
+				info.setVisible(true);			
+			}
+		
+		});
+
+		
+	
+			
+		JButton button_2 = new JButton("Information");
+		button_2.setBounds(283, 134, 199, 48);
+		contentPane.add(button_2);
+		button_2.addActionListener(new ActionListener() {	
+			@Override
+			public void actionPerformed(ActionEvent e) {	
 				Information info = new Information();		
 				info.setVisible(true);
-			}
-						
+			}					
 		});
 		
 		
-		button_2.setBounds(102, 249, 199, 48);
-		contentPane.add(button_2);
-	}
-}
+		JButton exit_button = new JButton("Exit");
+		exit_button.setBounds(202, 254, 89, 23);
+		exit_button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			System.exit(1);
+			}
+		});
+		contentPane.add(exit_button);
+		
+			}
+		}

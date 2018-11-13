@@ -1,4 +1,4 @@
-package epl361_FinalProject;
+package Project;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -37,52 +37,73 @@ public class Information extends JFrame {
 	 */
 	public Information() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 464, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblInfo = new JLabel("Informations");
-		lblInfo.setFont(new Font("Tahoma",  Font.ITALIC, 16));
-		lblInfo.setBounds(134, 21, 136, 47);
+		JLabel lblInfo = new JLabel("Information");
+		lblInfo.setBounds(157, 11, 136, 47);
+		lblInfo.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
 		contentPane.add(lblInfo);
 		
 		JButton btnNewButton = new JButton("Customers");
+		btnNewButton.setBounds(138, 149, 136, 47);
+		contentPane.add(btnNewButton);
 		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+					@Override
+					public void actionPerformed(ActionEvent e) {			
+						Customer_Form info = new Customer_Form();		
+						info.setVisible(true);			
 			}
 		});
-		btnNewButton.setBounds(144, 89, 89, 23);
 		contentPane.add(btnNewButton);
 		
 		JButton button = new JButton("Collaborators");
-		button.setBounds(144, 144, 89, 23);
+		button.setBounds(240, 75, 136, 47);
 		contentPane.add(button);
+		button.addActionListener(new ActionListener() {	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				Collaborator_Form info = new Collaborator_Form();		
+				info.setVisible(true);
+			}
+			
+		});
 		
 		JButton button_1 = new JButton("Employees");
-		button_1.setBounds(144, 191, 89, 23);
+		button_1.setBounds(30, 75, 136, 47);
 		contentPane.add(button_1);
+		button_1.addActionListener(new ActionListener() {	
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				EmployeesForm info = new EmployeesForm();		
+				info.setVisible(true);
+			}
+		});
+		
+		
 		
 		JButton btnNewButton_1 = new JButton("Exit");
+		btnNewButton_1.setBounds(359, 238, 89, 23);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			System.exit(1);
 			}
 		});
-		btnNewButton_1.setBounds(345, 238, 89, 23);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("< Go Back");
+		btnNewButton_2.setBounds(0, 238, 109, 23);
 		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				AdminPanel adminP = new AdminPanel();
-				
+			public void actionPerformed(ActionEvent e) {		
+				AdminPanel adminP = new AdminPanel();		
 				adminP.setVisible(true);
 			}
 		});
-		btnNewButton_2.setBounds(0, 238, 89, 23);
 		contentPane.add(btnNewButton_2);
 		
 

@@ -1,4 +1,4 @@
-package epl361_FinalProject;
+package Project;
 
 import java.awt.EventQueue;
 import java.awt.Window;
@@ -18,7 +18,7 @@ import javax.swing.JPasswordField;
 import javax.swing.JButton;
 import java.awt.Font;
 
-public class Fr1_login {
+public class Login {
 
 	private JFrame frame;
 	private JTextField textField;
@@ -31,7 +31,7 @@ public class Fr1_login {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Fr1_login window = new Fr1_login();
+					Login window = new Login();				
 					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -43,7 +43,7 @@ public class Fr1_login {
 	/**
 	 * Create the application.
 	 */
-	public Fr1_login() {
+	public Login() {
 		initialize();
 	}
 

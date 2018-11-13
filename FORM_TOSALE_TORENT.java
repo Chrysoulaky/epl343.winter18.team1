@@ -1,4 +1,4 @@
-package epl361_FinalProject;
+package Project;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
