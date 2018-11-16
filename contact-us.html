@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<title>Orphanou Estates</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/style.css">
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+   	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+  <nav class="navbar navbar-inverse visible " data-nav-status="toggle" id="navbar" name="navbar" style="z-index: 500; position: fixed; top: 0; width: 100%; border-radius:0px;">
+    <div class="navbar-header">
+    	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#">My Store</a>
+	</div>
+	
+	<div class="collapse navbar-collapse js-navbar-collapse">
+		<ul class="nav navbar-nav">
+			<li><a href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/index.html">HOME</a></li>
+			<li class="dropdown mega-dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICES<span class="caret"></span></a>				
+				<ul class="dropdown-menu" style="background: #337ab7;">
+		          	<li><a href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/buy-rent.html">BUY/RENT</a></li>
+		          	<li><a href="#">SELL/RENT</a></li>
+        		</ul>				
+			</li>
+            
+            <li><a href="#">ABOUT US</a></li>
+  			<li><a href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/contact-us.html">CONTACT US</a></li>
+  			<li><a href="#">PROPERTY NEWS</a></li>
+		</ul>
+        <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My account <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+        <li><a href="#">My cart (0) items</a></li>
+      </ul>
+	</div><!-- /.nav-collapse -->
+  </nav>
+
+	<!-- <div class="container-fluid col-sm-12" style="margin-top: 60px;"> -->
+
+		<section id="contact">
+			<div class="section-content">
+				<h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
+				<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
+			</div>
+			<div class="contact-section">
+			<div class="container">
+				<form>
+					<div class="col-sm-6 form-line">
+			  			<div class="form-group">
+			  				<label for="exampleInputUsername">Your name</label>
+					    	<input type="text" class="form-control" id="" placeholder=" Enter Name"  style="font-size: 20px;">
+				  		</div>
+				  		<div class="form-group">
+					    	<label for="exampleInputEmail">Email Address</label>
+					    	<input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id" style="font-size: 20px;">
+					  	</div>	
+					  	<div class="form-group">
+					    	<label for="telephone">Mobile No.</label>
+					    	<input type="tel" class="form-control" id="telephone" placeholder=" Enter 8-digit mobile no." style="font-size: 20px;">
+			  			</div>
+			  		</div>
+			  		<div class="col-sm-6">
+			  			<div class="form-group">
+			  				<label for ="description"> Message</label>
+			  			 	<textarea  class="form-control" id="description" placeholder="Enter Your Message" style="font-size: 20px;"></textarea>
+			  			</div>
+			  			<div>
+
+			  				<button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+			  			</div>
+			  			
+					</div>
+				</form>
+			</div>
+		</section>
+
+	<!-- </div> -->
+
+	
+
+</body>
+
+<script>
+	$(document).ready(function(){
+		var h = $(document).height();
+		document.getElementById('contact').style.height = h +"px";
+
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+            $(this).toggleClass('open');       
+        }
+    );
+
+    
+// var previousScroll = 0;
+//     $(window).scroll(function(){
+
+//     var currentScroll = $(this).scrollTop();
+
+//     /*
+//       If the current scroll position is greater than 0 (the top) AND the current scroll position is less than the document height minus the window height (the bottom) run the navigation if/else statement.
+//     */
+//     if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()){
+//       /*
+//         If the current scroll is greater than the previous scroll (i.e we're scrolling down the page), hide the nav.
+//       */
+//       if (currentScroll > previousScroll){
+//         window.setTimeout(hideNav, 10);
+//       /*
+//         Else we are scrolling up (i.e the previous scroll is greater than the current scroll), so show the nav.
+//       */
+//       } else {
+//         window.setTimeout(showNav, 10);
+//       }
+//       /* 
+//         Set the previous scroll value equal to the current scroll.
+//       */
+//       previousScroll = currentScroll;
+//     }
+
+//   });
+
+//   function hideNav() {
+//     $("[data-nav-status='toggle']").removeClass("show").addClass("hidden");
+//   }
+//   function showNav() {
+//     $("[data-nav-status='toggle']").removeClass("hidden").addClass("show");
+//   }
+});
+</script>
