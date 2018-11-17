@@ -1,5 +1,6 @@
 package Project;
 
+import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Window;
 import java.awt.event.ActionListener;
@@ -15,8 +16,10 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Font;
+import java.awt.SystemColor;
 
 public class Login {
 
@@ -52,6 +55,7 @@ public class Login {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().setBackground(SystemColor.control);
 		frame.setTitle("Login");
 		frame.setResizable(false);
 		frame.setSize(450, 300);
@@ -66,6 +70,7 @@ public class Login {
 		textField.setColumns(10);
 		
 		
+		 
 		//Username Label
 		JLabel lblUsername = new JLabel("Username :");
 		lblUsername.setBounds(55, 97, 132, 14);
@@ -103,8 +108,9 @@ public class Login {
 		
 		JLabel lblLoginToAdmin = new JLabel("Login to Admin Panel");
 		lblLoginToAdmin.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblLoginToAdmin.setBounds(109, 33, 162, 14);
+		lblLoginToAdmin.setBounds(109, 33, 166, 23);
 		frame.getContentPane().add(lblLoginToAdmin);
+		
 		
 		//Login Button
 		JButton btnLogin = new JButton("Login");
@@ -128,8 +134,6 @@ public class Login {
 					frame.dispose();
 		
 					adminPanel.setVisible(true);
-					
-					
 				
 				}
 				else{

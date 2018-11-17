@@ -142,7 +142,7 @@ public class EmployeesForm extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnSearch.setBounds(204, 198, 89, 21);
+		btnSearch.setBounds(316, 128, 89, 21);
 		contentPane.add(btnSearch);
 		
 		JLabel lblSalary = new JLabel("Salary");
@@ -178,6 +178,16 @@ public class EmployeesForm extends JFrame {
 		textField_5.setColumns(10);
 		textField_5.setBounds(316, 40, 86, 20);
 		contentPane.add(textField_5);
+		
+		JButton btnRights = new JButton("Rights");
+		btnRights.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Rights rights_employee = new Rights();		
+				rights_employee.setVisible(true);
+			}
+		});
+		btnRights.setBounds(316, 103, 89, 21);
+		contentPane.add(btnRights);
 	}
 
 }

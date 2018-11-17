@@ -3,6 +3,7 @@ package Project;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -11,6 +12,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Canvas;
 
 public class Statistics extends JFrame {
 
@@ -43,6 +45,7 @@ public class Statistics extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		
 		JLabel lblStatistics = new JLabel("Statistics");
 		lblStatistics.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
 		lblStatistics.setBounds(175, 11, 121, 14);
@@ -61,6 +64,11 @@ public class Statistics extends JFrame {
 		JButton button_1 = new JButton("Exit");
 		button_1.setBounds(345, 238, 89, 23);
 		contentPane.add(button_1);
+		
+		setLayout(new BorderLayout());
+		setContentPane(new JLabel(new ImageIcon("C:\\Users\\Chrysoula\\Desktop\\4th year\\EPL361\\Project\\statistics.png")));
+		setSize(400,400);
+		setSize(400,400);
+		 
 	}
-
 }

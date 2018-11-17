@@ -50,7 +50,7 @@ public class AdminPanel extends JFrame {
 	 */
 	public AdminPanel() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 581, 375);
+		setBounds(100, 100, 581, 423);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -87,19 +87,6 @@ public class AdminPanel extends JFrame {
 		JButton button = new JButton("Notifications");
 		button.setBounds(283, 75, 199, 48);
 		contentPane.add(button);
-		
-		JButton button_1 = new JButton("Statistics");
-		button_1.setBounds(36, 134, 199, 48);
-		contentPane.add(button_1);
-		button_1.addActionListener(new ActionListener() {	
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				
-				Statistics info = new Statistics();		
-				info.setVisible(true);			
-			}
-		
-		});
 
 		
 	
@@ -117,13 +104,23 @@ public class AdminPanel extends JFrame {
 		
 		
 		JButton exit_button = new JButton("Exit");
-		exit_button.setBounds(202, 254, 89, 23);
+		exit_button.setBounds(214, 250, 89, 23);
 		exit_button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			System.exit(1);
 			}
 		});
 		contentPane.add(exit_button);
+		
+		JButton btnNewButton_1 = new JButton("Statistics");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Statistics stats = new Statistics();
+				stats.setVisible(true);
+			}
+		});
+		btnNewButton_1.setBounds(36, 138, 199, 44);
+		contentPane.add(btnNewButton_1);
 		
 			}
 		}

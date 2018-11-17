@@ -66,7 +66,6 @@ public class Information extends JFrame {
 		button.addActionListener(new ActionListener() {	
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
 				Collaborator_Form info = new Collaborator_Form();		
 				info.setVisible(true);
 			}

@@ -167,7 +167,7 @@ public class Customer_Form extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnSearch.setBounds(207, 198, 86, 21);
+		btnSearch.setBounds(208, 198, 86, 21);
 		contentPane.add(btnSearch);
 	}
 }
