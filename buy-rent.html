@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Orphanou Estates</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <!-- <link rel="stylesheet" href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/style.css"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  
+  <style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  }  
+  .jumbotron {
+      background-color: #f4511e;
+      color: #fff;
+      padding: 100px 25px;
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0px;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #f4511e; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #f4511e;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #f4511e !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #f4511e;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+
+  .form-control{
+		display: unset;
+	}
+
+	a {
+    background-color: #f4511e;
+	}
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+
+  /*--------*/
+
+  	input[type="radio"],
+	input[type="checkbox"] {
+	  margin: 8px 0 0;
+	  margin-top: 1px \9; // IE8-9
+	  line-height: normal;
+	}
+
+	.btn:hover {
+      border: 1px solid #f4511e;
+      /*background-color: #fff !important;*/
+      color: #black;
+  }
+
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="background: linear-gradient(to left, #f4511e , #565671); color: black;">
+
+<nav class="navbar navbar-default navbar-fixed-top" style="height: 80px;">
+  <div class="container" style="width: 100%;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage"><img name="img" src="logo.png" height="50px" width="155px"></a>
+    </div>
+    <div class="collapse navbar-collapse col-sm-8" id="myNavbar" style="top: 15px;">
+    	<ul class="nav navbar-nav">
+					<li><a href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/index_new.html">HOME</a></li>
+					<li class="dropdown mega-dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICES<span class="caret"></span></a>				
+						<ul class="dropdown-menu" style="background: #f4511e;">
+				          	<li onclick="buyrent()"><a href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/buy-rent.html">BUY/RENT</a></li>
+				          	<li><a href="#">SELL/RENT</a></li>
+		        		</ul>				
+					</li>
+		            
+		            <li><a href="#">ABOUT US</a></li>
+		  			<li onclick="contact()"><a href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/contact-us_new.html">CONTACT US</a></li>
+		  			<li><a href="#">PROPERTY NEWS</a></li>
+				</ul>
+			</div>
+			
+  		</div>
+	</nav>
+
+<!-- <div class="jumbotron text-center" style="align-items: center;">
+  <h1>Nicos Orphanou Estates</h1> 
+  <p>We specialize in real estates</p> 
+  <form>
+    <div class="">
+      <input type="email" class="form-control" size="50" placeholder="Email Address" style=" right: 0px; width: 33%; align-self: center; float: initial;" required>     
+        <button type="button" class="btn btn-danger" style="float: initial;">Subscribe</button>
+    </div>
+  </form>
+</div> -->
+
+<!-- Container (About Section) -->
+<div id="buy" class="container-fluid" style="margin-top: 80px;">
+  <div class="row">
+    
+    <div class="col-sm-12 well auth-box">
+      <!-- <span class="glyphicon glyphicon-signal logo"></span> -->
+      <form>
+        			<fieldset>
+
+          <!-- Form Name -->
+		          		<legend>Quick Search</legend>
+
+		          <!-- Password input-->
+		           <!-- Multiple Checkboxes (inline) -->
+		           		<div class="col-sm-4 form-line">
+			      			<div class="form-group">
+			            		<label class=" control-label" for="checkboxes">Interested for</label>			            		
+			            		<div class="">
+				              		<label class="checkbox-inline" for="checkboxes-0">
+				                		<input name="checkboxes" id="checkboxes-0" value="" type="checkbox" checked="">Buy
+				              		</label>
+				              		<label class="checkbox-inline" for="checkboxes-1">
+				                		<input name="checkboxes" id="checkboxes-1" value="" type="checkbox">Rent
+				              		</label>             
+			            		</div>
+			          		</div>
+
+
+			          <!-- Select Basic -->
+				          	<div class="form-group">
+				            	<label class=" control-label" for="selectbasic">Town</label>
+				            	<div class="">
+				              		<select id="selectbasic" name="selectbasic" class="form-control">
+						                <option value="1">Nicosia</option>
+						                <option value="2">Larnaca</option>
+						                <option value="3">Limassol</option>
+						                <option value="4">Paphos</option>
+						                <option value="5">Famagusta</option>
+				              		</select>
+				            	</div>
+				          	</div>
+
+				          	<div class="form-group">
+				            	<label class=" control-label" for="searchinput">Area</label>
+				            	<div class="">
+				              		<input id="searchinput" name="searchinput" placeholder="Search for specific area" class="form-control input-md" type="search">
+				            	</div>
+				          	</div>
+
+				          	<div class="form-group">
+				            	<label class=" control-label" for="selectbasic">Property's Type</label>
+				            	<div class="">
+				              		<select id="selectbasic" name="selectbasic" class="form-control">
+						                <option value="1">Apartment</option>
+						                <option value="2">Building</option>
+						                <option value="3">House</option>
+						                <option value="4">Field</option>
+						                <option value="5">Office</option>
+						                <option value="6">Plot</option>
+						                <option value="7">Warehouse</option>
+						                <option value="8">Store</option>
+				              		</select>
+				            	</div>
+				          	</div>
+
+				          	<div class="form-group">
+			            		<label class="control-label" for="radios">Subtype of Property</label>
+			            		<div class=""> 
+			              			<label class="radio-inline" for="radios-0">
+			                			<input name="radios" id="radios-0" value="" checked="checked" type="radio">
+			                			Residential
+			              			</label> 
+			              			<label class="radio-inline" for="radios-1">
+			                			<input name="radios" id="radios-1" value="2" type="radio">
+			                			Commercial
+			              			</label> 
+			              			<label class="radio-inline" for="radios-2">
+			                			<input name="radios" id="radios-2" value="3" type="radio">
+			                			Industrial
+			              			</label> 
+			            		</div>
+			          		</div>
+
+			          	</div>
+
+			          	<div class="col-sm-4"> 
+
+			          		<div class="form-group">
+			            		<label class="control-label" for="radios">Furnished</label>
+			            		<div class="">
+			              			<div class="radio">
+			                			<label for="radios-4">
+			                  				<input name="radios-4" id="radios-4" type="radio">
+			                  				Yes
+			                			</label>
+			              			</div>
+			              			<div class="radio">
+			                			<label for="radios-5">
+			                  				<input name="radios" id="radios-5" value="" type="radio">
+			                  				No
+			                			</label>
+			              			</div>
+			            		</div>
+			          		</div>
+
+			          		<div class="form-group">
+			            		<label class="control-label" for="radios">Rooms</label>
+			            		<div class="section input-group form-group">
+	    							<span onclick="btnminus()" class="btn-minus input-group-addon" style="cursor: pointer;">-</span>
+								    <input value="1" id="m1" type="text" class="m1 form-control" name="m1" style="text-align: center;">
+								    <span onclick="btnplus()" class="btn-plus input-group-addon" style="cursor: pointer;">+</span>
+						  		</div>
+			              	</div>
+			                   
+			                <div class="form-group">
+			            		<label class="control-label" for="radios">Min Price (€)</label> 
+			            		<div class="section input-group form-group">
+	    							<span onclick="btnminus2()" class="btn-minus2 input-group-addon" style="cursor: pointer;">-</span>
+								    <input value="10" id="m2" type="text" class="m2 form-control" name="m2" placeholder="min price" style="text-align: center;">
+								    <span onclick="btnplus2()" class="btn-plus2 input-group-addon" style="cursor: pointer;">+</span>
+						  		</div>
+			              	</div>
+
+			              	<div class="form-group">
+			            		<label class="control-label" for="radios">Max Price (€)</label>
+			            		<div class="section input-group form-group">
+	    							<span onclick="btnminus3()" class="btn-minus3 input-group-addon" style="cursor: pointer;">-</span>
+								    <input value="10" id="m3" type="text" class="m3 form-control" name="m3" placeholder="min price" style="text-align: center;">
+								    <span onclick="btnplus3()" class="btn-plus3 input-group-addon" style="cursor: pointer;">+</span>
+						  		</div>
+			              	</div>
+
+			            </div>
+
+			            <div class="col-sm-4"> 
+			            	<div class="form-group">
+				            	<label class=" control-label" for="selectbasic">Square meters</label>
+				            	<div class="">
+				              		<select id="selectbasic" name="selectbasic" class="form-control">
+						                <option value="1">50  or  less</option>
+						                <option value="2">50 - 75</option>
+						                <option value="3">75 - 100</option>
+						                <option value="4">100 - 125</option>
+						                <option value="5">125 - 150</option>
+						                <option value="6">150 - 200</option><option value="7">200+</option>
+
+				              		</select>
+				            	</div>
+				          	</div>
+
+
+				          	<div class="form-group">
+			            		<label class=" control-label" for="checkboxes">Pool included</label>			            		
+			            		<div class="">
+				              		<label class="checkbox-inline" for="checkboxes-0">
+				                		<input name="checkboxes" id="checkboxes-0" value="" type="checkbox" checked="">Yes
+				              		</label>
+				              		<label class="checkbox-inline" for="checkboxes-1">
+				                		<input name="checkboxes" id="checkboxes-1" value="" type="checkbox">Yes
+				              		</label>             
+			            		</div>
+			          		</div>
+
+			          		<div class="form-group">
+			            		<label class="control-label" for="radios">Floors</label>
+			            		<div class="section input-group form-group">
+	    							<span onclick="btnminus0()" class="btn-minus0 input-group-addon" style="cursor: pointer;">-</span>
+								    <input value="1" id="m0" type="text" class="m0 form-control" name="m0" style="text-align: center;">
+								    <span onclick="btnplus0()" class="btn-plus0 input-group-addon" style="cursor: pointer;">+</span>
+						  		</div>
+			              	</div>
+
+				          	<div class="form-group">
+		            			<div class="">
+		              				<!-- <button id="singlebutton" name="singlebutton" class="btn btn-default" style="width: 100%;">Search</button> -->
+		              				<button id="singlebutton" name="singlebutton" class="btn btn-default" style="width: 100%; margin-top: 15px;">Search</button>
+		            			</div>
+		          			</div>
+			            </div>
+	    			</fieldset>
+      			</form>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+
+	// function resizeEvent(){
+	// 	if(window.innerWidth!=window.outerWidth){
+	// 	 $(".navbarright2").addClass("hidden");
+		 
+	// 	}
+	// } 
+
+	function btnminus0(){
+		 var now = $(".m0").val();
+                if ($.isNumeric(now)){
+                    if (parseInt(now) -1 > 0){ now--;}
+                    $(".m0").val(now);
+                }else{
+                    $(".m0").val("1");
+                }
+	} 
+	function btnplus0(){
+		var now = $(".m0").val();
+                if ($.isNumeric(now)){
+                    $(".m0").val(parseInt(now)+1);
+                }else{
+                    $(".m0").val("1");
+                }
+	} 
+
+	function btnminus(){
+		 var now = $(".m1").val();
+                if ($.isNumeric(now)){
+                    if (parseInt(now) -1 > 0){ now--;}
+                    $(".m1").val(now);
+                }else{
+                    $(".m1").val("1");
+                }
+	} 
+	function btnplus(){
+		var now = $(".m1").val();
+                if ($.isNumeric(now)){
+                    $(".m1").val(parseInt(now)+1);
+                }else{
+                    $(".m1").val("1");
+                }
+	} 
+	function btnminus2(){
+		 var now2 = $(".m2").val();
+                
+                if ($.isNumeric(now2)){
+                    if (parseInt(now2) -1 > 9){ now2=now2 - 10;}
+                    $(".m2").val(now2);
+                }else{
+                    $(".m2").val("1");
+                }
+	} 
+	function btnplus2(){
+		var now2 = $(".m2").val();
+                if ($.isNumeric(now2)){
+                    $(".m2").val(parseInt(now2)+10);
+                }else{
+                    $(".m2").val("1");
+                }
+	} 
+	function btnminus3(){
+		var now3 = $(".m3").val();
+                if ($.isNumeric(now3)){
+                    if (parseInt(now3) -1 > 9){ now3=now3-10;}
+                    $(".m3").val(now3);
+                }else{
+                    $(".m3").val("1");
+                }
+	} 
+	function btnplus3(){
+		var now3 = $(".m3").val();
+                if ($.isNumeric(now3)){
+                    $(".m3").val(parseInt(now3)+10);
+                }else{
+                    $(".m3").val("1");
+                }
+	} 
+
+$(document).ready(function(){
+
+	
+	document.getElementsByTagName("radios-4").checked = true;
+	document.getElementById("radios-0").checked = true;
+	// document.getElementById("radios-4").checked = true;
+	// var maxht=20;
+	// var maxwt=45;
+	// var minht=20;
+	// var minwt=45;
+ //  var imgs = document.getElementsByTagName('img');
+
+ //  var resize_image = function(img, newht, newwt) {
+ //    img.height = newht;
+ //    img.width  = newwt;
+ //  };
+  
+ //  for (var i = 0; i < imgs.length; i++) {
+ //    var img = imgs[i];
+ //    if (img.height > maxht || img.width > maxwt) {
+ //      // Use Ratios to constraint proportions.
+ //      var old_ratio = img.height / img.width;
+ //      var min_ratio = minht / minwt;
+ //      // If it can scale perfectly.
+ //      if (old_ratio === min_ratio) {
+ //        resize_image(img, minht, minwt);
+ //      } 
+ //      else {
+ //        var newdim = [img.height, img.width];
+ //        newdim[0] = minht;  // Sort out the height first
+ //        // ratio = ht / wt => wt = ht / ratio.
+ //        newdim[1] = newdim[0] / old_ratio;
+ //        // Do we still have to sort out the width?
+ //        if (newdim[1] > maxwt) {
+ //          newdim[1] = minwt;
+ //          newdim[0] = newdim[1] * old_ratio;
+ //        }
+ //        resize_image(img, newdim[0], newdim[1]);
+ //      }
+ //    }
+ //  }
+
+
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
