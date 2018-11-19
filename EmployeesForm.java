@@ -16,10 +16,10 @@ import javax.swing.border.EmptyBorder;
 public class EmployeesForm extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField txtChristiana;
+	private JTextField txtAndreou;
+	private JTextField txtthChalkidosYermasoyia;
+	private JTextField txtAndreouchristianaoutlookcom;
 	private JTextField textField_4;
 	private JTextField textField_5;
 
@@ -58,7 +58,7 @@ public class EmployeesForm extends JFrame {
 		contentPane.setLayout(null);
 		contentPane.setLayout(null);
 		contentPane.setLayout(null);
-		btnNewButton.setBounds(5, 233, 105, 20);
+		btnNewButton.setBounds(0, 239, 103, 23);
 		contentPane.add(btnNewButton);
 		
 		JLabel lblNewLabel = new JLabel("Name");
@@ -94,7 +94,7 @@ public class EmployeesForm extends JFrame {
 		});
 		btnDelete.setBounds(151, 290, 89, 23);
 		contentPane.add(btnDelete);
-		btnAdd.setBounds(139, 230, 89, 23);
+		btnAdd.setBounds(135, 239, 89, 23);
 		contentPane.add(btnAdd);
 		
 		JButton button = new JButton("- Delete");
@@ -102,7 +102,7 @@ public class EmployeesForm extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		button.setBounds(234, 230, 89, 23);
+		button.setBounds(236, 239, 89, 23);
 		contentPane.add(button);
 		
 		JButton button_1 = new JButton("Exit");
@@ -111,7 +111,7 @@ public class EmployeesForm extends JFrame {
 				System.exit(-1);
 			}
 		});
-		button_1.setBounds(335, 230, 89, 23);
+		button_1.setBounds(345, 239, 89, 23);
 		contentPane.add(button_1);
 		
 		JButton button_2 = new JButton(">");
@@ -149,32 +149,38 @@ public class EmployeesForm extends JFrame {
 		lblSalary.setBounds(15, 153, 46, 14);
 		contentPane.add(lblSalary);
 		
-		textField = new JTextField();
-		textField.setBounds(100, 40, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtChristiana = new JTextField();
+		txtChristiana.setText("Christiana");
+		txtChristiana.setBounds(100, 40, 86, 20);
+		contentPane.add(txtChristiana);
+		txtChristiana.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(100, 65, 86, 20);
-		contentPane.add(textField_1);
+		txtAndreou = new JTextField();
+		txtAndreou.setText("Andreou");
+		txtAndreou.setColumns(10);
+		txtAndreou.setBounds(100, 65, 86, 20);
+		contentPane.add(txtAndreou);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(100, 100, 86, 20);
-		contentPane.add(textField_2);
+		txtthChalkidosYermasoyia = new JTextField();
+		txtthChalkidosYermasoyia.setText("5th Chalkidos, Yermasoyia");
+		txtthChalkidosYermasoyia.setColumns(10);
+		txtthChalkidosYermasoyia.setBounds(100, 100, 193, 20);
+		contentPane.add(txtthChalkidosYermasoyia);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(100, 125, 86, 20);
-		contentPane.add(textField_3);
+		txtAndreouchristianaoutlookcom = new JTextField();
+		txtAndreouchristianaoutlookcom.setText("andreou_christiana@outlook.com");
+		txtAndreouchristianaoutlookcom.setColumns(10);
+		txtAndreouchristianaoutlookcom.setBounds(100, 125, 193, 20);
+		contentPane.add(txtAndreouchristianaoutlookcom);
 		
 		textField_4 = new JTextField();
+		textField_4.setText("850");
 		textField_4.setColumns(10);
 		textField_4.setBounds(100, 150, 86, 20);
 		contentPane.add(textField_4);
 		
 		textField_5 = new JTextField();
+		textField_5.setText("99-4578912");
 		textField_5.setColumns(10);
 		textField_5.setBounds(316, 40, 86, 20);
 		contentPane.add(textField_5);
