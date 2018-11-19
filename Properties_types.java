@@ -87,7 +87,7 @@ public class Properties_types extends JFrame {
 		contentPane.add(radioButton_4);
 		
 		JRadioButton radioButton_5 = new JRadioButton("Storage Building");
-		radioButton_5.setBounds(212, 56, 109, 23);
+		radioButton_5.setBounds(212, 56, 138, 23);
 		contentPane.add(radioButton_5);
 		
 		JButton btnGo = new JButton("Go >");
