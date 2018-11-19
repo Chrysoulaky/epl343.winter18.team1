@@ -219,6 +219,95 @@
 
 	}
 
+
+
+/*=========================
+  Icons
+ ================= */
+
+/* footer social icons */
+ul.social-network {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li {
+	display: inline;
+	margin: 0 5px;
+}
+
+
+/* footer social icons */
+.social-network a.icoRss:hover {
+	background-color: #F56505;
+}
+.social-network a.icoFacebook:hover {
+	background-color:#3B5998;
+}
+.social-network a.icoTwitter:hover {
+	background-color:#33ccff;
+}
+.social-network a.icoGoogle:hover {
+	background-color:#BD3518;
+}
+.social-network a.icoVimeo:hover {
+	background-color:#0590B8;
+}
+.social-network a.icoLinkedin:hover {
+	background-color:#007bb7;
+}
+.social-network a.icoRss:hover i, .social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i,
+.social-network a.icoGoogle:hover i, .social-network a.icoVimeo:hover i, .social-network a.icoLinkedin:hover i {
+	color:#fff;
+}
+a.socialIcon:hover, .socialHoverClass {
+	color:#44BCDD;
+}
+
+.social-circle li a {
+	display:inline-block;
+	position:relative;
+	margin:0 auto 0 auto;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	text-align:center;
+	width: 50px;
+	height: 50px;
+	font-size:20px;
+}
+.social-circle li i {
+	margin:0;
+	line-height:50px;
+	text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+	-moz-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	-ms--transform: rotate(360deg);
+	transform: rotate(360deg);
+	-webkit-transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	-ms-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.social-circle i {
+	color: #fff;
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	-o-transition: all 0.8s;
+	-ms-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+/*a {
+ background-color: #D3D3D3;   
+}*/
+
+
   </style>
 <body>
   <nav class="navbar navbar-default navbar-fixed-top" style="height: 80px;">
@@ -296,7 +385,7 @@
        <div class="container-fluid">
           <div class="contact-form">
            <div class="row">
-               <div class="col-sm-7">                  
+               <div class="col-sm-6">                  
                     <form id="ajax-contact"  method="post" action="#" role="form">
                         <div class="messages" id="form-messages"></div>
                         <div class="controls">
@@ -356,12 +445,12 @@
                     </form>
     
                </div>
-               <div class="col-sm-5">
+               <div class="col-sm-5" style="margin-top: 50px;">
                    <div class="row col1">
-                       <div class="col-xs-3">
+                       <div class="col-sm-3">
                            <i class="fa fa-map-marker" style="font-size:16px;"></i>   Address
                        </div>
-                       <div class="col-xs-9">
+                       <div class="col-sm-9">
                             One Gateway Center, Suite 25500+,<br> Newark 23, NJ 10235
                        </div>
                    </div>
@@ -400,6 +489,15 @@
                     </div><br>
                     <iframe width="100%" height="230" frameborder="0" style="border-radius:0px;" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?client=firefox-a&ie=UTF8&q=ethane+web+technologies&fb=1&gl=in&hq=ethane+web+technologies&cid=8183905562449910042&t=m&ll=28.639225,77.390442&spn=0.052731,0.154495&z=13&iwloc=A&output=embed"  style="border-radius:20px;"></iframe>
                </div>
+               <nav class="social col-sm-1" style="margin-top: 50px;">
+          <ul class="social-network social-circle">
+                        <li><a href="#" class="icoRss" title="Rss" style="border-color: #1f2a3c; border-style: solid;"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#" class="icoFacebook" title="Facebook" style="border-color: #1f2a3c; border-style: solid;"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" class="icoTwitter" title="Twitter" style="border-color: #1f2a3c; border-style: solid;"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" class="icoGoogle" title="Google +" style="border-color: #1f2a3c; border-style: solid;"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin" style="border-color: #1f2a3c; border-style: solid;"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>	
+      </nav>
            </div>
            
           </div>
