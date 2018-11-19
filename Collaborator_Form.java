@@ -17,12 +17,12 @@ import javax.swing.SwingConstants;
 public class Collaborator_Form extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-	private JTextField textField_2;
-	private JTextField textField_3;
+	private JTextField txtJoulia;
+	private JTextField txtSvetlana;
+	private JTextField txtrdKyriakouMatsi;
+	private JTextField txtJoulissmithoutlookcom;
 	private JTextField textField_4;
-	private JTextField textField_5;
+	private JTextField txtKj;
 
 	/**
 	 * Launch the application.
@@ -59,7 +59,7 @@ public class Collaborator_Form extends JFrame {
 			}
 		});
 		contentPane.setLayout(null);
-		btnNewButton.setBounds(5, 233, 102, 17);
+		btnNewButton.setBounds(0, 230, 97, 32);
 		contentPane.add(btnNewButton);
 		
 		JLabel lblCustomersInformation = new JLabel("Collaborator's Information");
@@ -77,11 +77,11 @@ public class Collaborator_Form extends JFrame {
 		contentPane.add(label);
 		
 		JLabel label_1 = new JLabel("Address");
-		label_1.setBounds(15, 103, 71, 14);
+		label_1.setBounds(15, 138, 71, 14);
 		contentPane.add(label_1);
 		
 		JLabel label_2 = new JLabel("E-mail");
-		label_2.setBounds(15, 128, 46, 14);
+		label_2.setBounds(15, 163, 46, 14);
 		contentPane.add(label_2);
 		
 		JLabel label_3 = new JLabel("Phone Number");
@@ -89,38 +89,44 @@ public class Collaborator_Form extends JFrame {
 		contentPane.add(label_3);
 		
 		JLabel label_4 = new JLabel("Number of License");
-		label_4.setBounds(10, 170, 122, 14);
+		label_4.setBounds(15, 107, 107, 20);
 		contentPane.add(label_4);
 		
-		textField = new JTextField();
-		textField.setBounds(138, 40, 86, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtJoulia = new JTextField();
+		txtJoulia.setText("Joulia");
+		txtJoulia.setBounds(138, 40, 86, 20);
+		contentPane.add(txtJoulia);
+		txtJoulia.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(138, 65, 86, 20);
-		contentPane.add(textField_1);
+		txtSvetlana = new JTextField();
+		txtSvetlana.setText("Smith");
+		txtSvetlana.setColumns(10);
+		txtSvetlana.setBounds(138, 65, 86, 20);
+		contentPane.add(txtSvetlana);
 		
-		textField_2 = new JTextField();
-		textField_2.setColumns(10);
-		textField_2.setBounds(138, 100, 86, 20);
-		contentPane.add(textField_2);
+		txtrdKyriakouMatsi = new JTextField();
+		txtrdKyriakouMatsi.setText("3rd, Kyriakou Matsi str, Nicosia");
+		txtrdKyriakouMatsi.setColumns(10);
+		txtrdKyriakouMatsi.setBounds(138, 135, 195, 20);
+		contentPane.add(txtrdKyriakouMatsi);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(138, 125, 86, 20);
-		contentPane.add(textField_3);
+		txtJoulissmithoutlookcom = new JTextField();
+		txtJoulissmithoutlookcom.setText("JoulisSmith@outlook.com\r\n");
+		txtJoulissmithoutlookcom.setColumns(10);
+		txtJoulissmithoutlookcom.setBounds(138, 160, 195, 20);
+		contentPane.add(txtJoulissmithoutlookcom);
 		
 		textField_4 = new JTextField();
+		textField_4.setText("99-965478");
 		textField_4.setColumns(10);
 		textField_4.setBounds(333, 40, 86, 20);
 		contentPane.add(textField_4);
 		
-		textField_5 = new JTextField();
-		textField_5.setColumns(10);
-		textField_5.setBounds(138, 167, 86, 20);
-		contentPane.add(textField_5);
+		txtKj = new JTextField();
+		txtKj.setText("KJ-12345");
+		txtKj.setColumns(10);
+		txtKj.setBounds(138, 107, 86, 20);
+		contentPane.add(txtKj);
 		
 		JButton btnAdd = new JButton("+ Add");
 		btnAdd.setHorizontalAlignment(SwingConstants.LEFT);
@@ -136,7 +142,7 @@ public class Collaborator_Form extends JFrame {
 		});
 		btnDelete.setBounds(151, 290, 89, 23);
 		contentPane.add(btnDelete);
-		btnAdd.setBounds(139, 230, 89, 23);
+		btnAdd.setBounds(151, 235, 89, 23);
 		contentPane.add(btnAdd);
 		
 		JButton button = new JButton("- Delete");
@@ -144,7 +150,7 @@ public class Collaborator_Form extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		button.setBounds(234, 230, 89, 23);
+		button.setBounds(244, 235, 89, 23);
 		contentPane.add(button);
 		
 		JButton button_1 = new JButton("Exit");
@@ -153,7 +159,7 @@ public class Collaborator_Form extends JFrame {
 				System.exit(-1);
 			}
 		});
-		button_1.setBounds(335, 230, 89, 23);
+		button_1.setBounds(345, 235, 89, 23);
 		contentPane.add(button_1);
 		
 		JButton button_2 = new JButton(">");
@@ -161,7 +167,7 @@ public class Collaborator_Form extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		button_2.setBounds(366, 198, 53, 21);
+		button_2.setBounds(366, 203, 53, 21);
 		contentPane.add(button_2);
 		
 		JButton button_3 = new JButton("<");
@@ -169,14 +175,14 @@ public class Collaborator_Form extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		button_3.setBounds(303, 198, 53, 21);
+		button_3.setBounds(303, 203, 53, 21);
 		contentPane.add(button_3);
 		JButton btnSearch = new JButton("Search");
 		btnSearch.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnSearch.setBounds(204, 198, 89, 21);
+		btnSearch.setBounds(204, 203, 89, 21);
 		contentPane.add(btnSearch);
 	}
 }

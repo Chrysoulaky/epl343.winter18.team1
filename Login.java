@@ -20,6 +20,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.SystemColor;
+import java.awt.Color;
 
 public class Login {
 
@@ -58,7 +59,7 @@ public class Login {
 		frame.getContentPane().setBackground(SystemColor.control);
 		frame.setTitle("Login");
 		frame.setResizable(false);
-		frame.setSize(450, 300);
+		frame.setSize(635, 477);
 		
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -73,50 +74,66 @@ public class Login {
 		 
 		//Username Label
 		JLabel lblUsername = new JLabel("Username :");
-		lblUsername.setBounds(55, 97, 132, 14);
-		lblUsername.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblUsername.setForeground(Color.BLACK);
+		lblUsername.setBounds(27, 190, 132, 14);
+		lblUsername.setFont(new Font("Tahoma", Font.BOLD, 16));
 		frame.getContentPane().add(lblUsername);
 		
 		//Password Label
 		JLabel lblPassword = new JLabel("Password :");
-		lblPassword.setBounds(55, 142, 132, 14);
-		lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblPassword.setBounds(27, 226, 95, 14);
+		lblPassword.setFont(new Font("Tahoma", Font.BOLD, 16));
 		frame.getContentPane().add(lblPassword);
 		
 		
 		passwordField_1 = new JPasswordField();
-		passwordField_1.setBounds(215, 134, 102, 27);
+		passwordField_1.setBounds(132, 222, 102, 27);
 		
 		frame.getContentPane().add(passwordField_1);
 		
 		textField = new JTextField();
 		textField.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		textField.setBounds(215, 77, 102, 27);
+		textField.setBounds(132, 184, 102, 27);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
 		
 		button = new JButton("Reset");
+		button.setFont(new Font("Tahoma", Font.BOLD, 11));
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textField.setText(null);
 				passwordField_1.setText(null);
 			}
 		});
-		button.setBounds(215, 198, 89, 23);
+		button.setBounds(128, 286, 89, 23);
 		frame.getContentPane().add(button);
 		
 		JLabel lblLoginToAdmin = new JLabel("Login to Admin Panel");
 		lblLoginToAdmin.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		lblLoginToAdmin.setBounds(109, 33, 166, 23);
+		lblLoginToAdmin.setBounds(27, 29, 166, 23);
 		frame.getContentPane().add(lblLoginToAdmin);
 		
 		
 		//Login Button
 		JButton btnLogin = new JButton("Login");
-		btnLogin.setBounds(109, 198, 89, 23);
+		btnLogin.setFont(new Font("Tahoma", Font.BOLD, 11));
+		btnLogin.setForeground(new Color(0, 0, 0));
+		btnLogin.setBounds(27, 286, 89, 23);
 		frame.getRootPane().setDefaultButton(btnLogin);
 		frame.getContentPane().add(btnLogin);
+		
+		JLabel lblNewLabel_1 = new JLabel("New label");
+		lblNewLabel_1.setIcon(new ImageIcon("C:\\Users\\mnicol17\\Web-Security.png"));
+		lblNewLabel_1.setBounds(88, 0, 541, 449);
+		frame.getContentPane().add(lblNewLabel_1);
+		//contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\mnicol17\\Web-Security.png"));
+		lblNewLabel.setBounds(359, 120, 46, 14);
+		//contentPane.add(lblNewLabel);
+		//frame.getContentPane().add(lblNewLabel);
 		
 		btnLogin.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent arg0){

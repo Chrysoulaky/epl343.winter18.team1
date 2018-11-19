@@ -11,6 +11,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.SystemColor;
 
 public class Information extends JFrame {
 
@@ -37,8 +38,9 @@ public class Information extends JFrame {
 	 */
 	public Information() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 464, 300);
+		setBounds(100, 100, 446, 298);
 		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.controlHighlight);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -49,12 +51,12 @@ public class Information extends JFrame {
 		contentPane.add(lblInfo);
 		
 		JButton btnNewButton = new JButton("Customers");
-		btnNewButton.setBounds(138, 149, 136, 47);
+		btnNewButton.setBounds(30, 151, 136, 47);
 		contentPane.add(btnNewButton);
 		btnNewButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {			
-						Customer_Form info = new Customer_Form();		
+						Find_Customer info = new Find_Customer();		
 						info.setVisible(true);			
 			}
 		});
@@ -87,7 +89,7 @@ public class Information extends JFrame {
 		
 		
 		JButton btnNewButton_1 = new JButton("Exit");
-		btnNewButton_1.setBounds(359, 238, 89, 23);
+		btnNewButton_1.setBounds(341, 238, 89, 23);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			System.exit(1);
@@ -101,9 +103,20 @@ public class Information extends JFrame {
 			public void actionPerformed(ActionEvent e) {		
 				AdminPanel adminP = new AdminPanel();		
 				adminP.setVisible(true);
+				
 			}
 		});
 		contentPane.add(btnNewButton_2);
+		
+		JButton btnProperties = new JButton("Properties");
+		btnProperties.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Properties_types pro=new Properties_types();
+				pro.setVisible(true);
+			}
+		});
+		btnProperties.setBounds(240, 151, 136, 47);
+		contentPane.add(btnProperties);
 		
 
 		

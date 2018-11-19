@@ -17,6 +17,10 @@ import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JMenuItem;
 import javax.swing.JCheckBoxMenuItem;
 import javax.swing.JComboBox;
+import java.awt.SystemColor;
+import javax.swing.ImageIcon;
+import java.awt.Color;
+import java.awt.Component;
 
 public class Webpage extends JFrame {
 
@@ -45,6 +49,7 @@ public class Webpage extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.controlHighlight);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -62,16 +67,18 @@ public class Webpage extends JFrame {
 			}
 		});
 		btnView.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnView.setBounds(68, 141, 89, 23);
+		btnView.setBounds(259, 86, 89, 23);
 		contentPane.add(btnView);
 		
 		
 		JLabel lblNewLabel = new JLabel("Webpage");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
-		lblNewLabel.setBounds(167, 25, 89, 23);
+		lblNewLabel.setForeground(Color.BLACK);
+		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 18));
+		lblNewLabel.setBounds(0, 0, 109, 41);
 		contentPane.add(lblNewLabel);
 		
 		JButton btnNewButton_2 = new JButton("< Go Back");
+		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		btnNewButton_2.setBounds(0, 238, 109, 23);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {		
@@ -82,6 +89,7 @@ public class Webpage extends JFrame {
 		contentPane.add(btnNewButton_2);
 		
 		JButton btnNewButton_1 = new JButton("Exit");
+		btnNewButton_1.setFont(new Font("Tahoma", Font.PLAIN, 11));
 		btnNewButton_1.setBounds(345, 238, 89, 23);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -91,9 +99,16 @@ public class Webpage extends JFrame {
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnEdit = new JButton("Edit");
-		btnEdit.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		btnEdit.setBounds(68, 95, 89, 23);
+		btnEdit.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		btnEdit.setBounds(70, 85, 89, 23);
 		contentPane.add(btnEdit);
+		
+		JLabel label = new JLabel("");
+		label.setAlignmentY(Component.TOP_ALIGNMENT);
+		label.setBackground(new Color(240, 240, 240));
+		label.setIcon(new ImageIcon("U:\\EPL343_361\\project\\src\\logo.png"));
+		label.setBounds(-11, 22, 445, 171);
+		contentPane.add(label);
 		
 		btnEdit.addActionListener(new ActionListener() {	
 			@Override

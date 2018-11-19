@@ -12,15 +12,17 @@ import javax.swing.JTextField;
 import javax.swing.JCheckBox;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class FORM_SELL_LET extends JFrame {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
+	private JTextField txtMarios;
+	private JTextField txtKyriakou;
 	private JTextField textField_2;
-	private JTextField textField_3;
-	private JTextField textField_4;
+	private JTextField txtMarioskyrcsucyaccy;
+	private JTextField txtBedrooms;
 
 	/**
 	 * Launch the application.
@@ -65,38 +67,44 @@ public class FORM_SELL_LET extends JFrame {
 		label_2.setBounds(52, 94, 46, 14);
 		contentPane.add(label_2);
 		
-		textField = new JTextField();
-		textField.setBounds(156, 11, 116, 17);
-		contentPane.add(textField);
-		textField.setColumns(10);
+		txtMarios = new JTextField();
+		txtMarios.setText("Marios");
+		txtMarios.setBounds(156, 11, 116, 17);
+		contentPane.add(txtMarios);
+		txtMarios.setColumns(10);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(156, 36, 116, 17);
-		contentPane.add(textField_1);
+		txtKyriakou = new JTextField();
+		txtKyriakou.setText("Kyriakou");
+		txtKyriakou.setColumns(10);
+		txtKyriakou.setBounds(156, 36, 116, 17);
+		contentPane.add(txtKyriakou);
 		
 		textField_2 = new JTextField();
+		textField_2.setText("99123456");
 		textField_2.setColumns(10);
 		textField_2.setBounds(156, 61, 116, 17);
 		contentPane.add(textField_2);
 		
-		textField_3 = new JTextField();
-		textField_3.setColumns(10);
-		textField_3.setBounds(156, 92, 116, 17);
-		contentPane.add(textField_3);
+		txtMarioskyrcsucyaccy = new JTextField();
+		txtMarioskyrcsucyaccy.setText("marios_kyr@cs.ucy.ac.cy");
+		txtMarioskyrcsucyaccy.setColumns(10);
+		txtMarioskyrcsucyaccy.setBounds(156, 92, 145, 17);
+		contentPane.add(txtMarioskyrcsucyaccy);
 		
 		JCheckBox chckbxNewCheckBox = new JCheckBox("Buy");
 		chckbxNewCheckBox.setBounds(152, 116, 97, 23);
 		contentPane.add(chckbxNewCheckBox);
 		
 		JCheckBox checkBox = new JCheckBox("Rent");
+		checkBox.setSelected(true);
 		checkBox.setBounds(156, 182, 97, 23);
 		contentPane.add(checkBox);
 		
-		textField_4 = new JTextField();
-		textField_4.setColumns(10);
-		textField_4.setBounds(156, 240, 116, 29);
-		contentPane.add(textField_4);
+		txtBedrooms = new JTextField();
+		txtBedrooms.setText("2 bedrooms");
+		txtBedrooms.setColumns(10);
+		txtBedrooms.setBounds(156, 240, 116, 29);
+		contentPane.add(txtBedrooms);
 		
 		JLabel label_3 = new JLabel("Additional Information :");
 		label_3.setBounds(5, 247, 139, 14);
@@ -124,5 +132,15 @@ public class FORM_SELL_LET extends JFrame {
 		JLabel label_6 = new JLabel("Interested for :");
 		label_6.setBounds(5, 120, 101, 14);
 		contentPane.add(label_6);
+		
+		JButton button = new JButton("< Go Back");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Notifications nots2=new Notifications();
+				nots2.setVisible(true);
+			}
+		});
+		button.setBounds(0, 277, 102, 23);
+		contentPane.add(button);
 	}
 }

@@ -2,6 +2,8 @@ package Project;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -15,6 +17,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JCheckBox;
+import javax.swing.JButton;
+import java.awt.Font;
+import java.awt.Color;
 
 public class FORM_TOSALE_TORENT extends JFrame {
 	
@@ -22,10 +27,10 @@ public class FORM_TOSALE_TORENT extends JFrame {
 
 
 		private JPanel contentPane;
-		private JTextField textField;
-		private JTextField textField_1;
+		private JTextField txtMaria;
+		private JTextField txtNicolaou;
 		private JTextField textField_2;
-		private JTextField textField_3;
+		private JTextField txtMnicolcsucyaccy;
 		private JLabel label;
 		private JTextField textField_4;
 
@@ -51,7 +56,7 @@ public class FORM_TOSALE_TORENT extends JFrame {
 		public FORM_TOSALE_TORENT() {
 			setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			
-			setBounds(100, 100, 450, 395);
+			setBounds(100, 100, 366, 425);
 			contentPane = new JPanel();
 			contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 			setContentPane(contentPane);
@@ -59,60 +64,95 @@ public class FORM_TOSALE_TORENT extends JFrame {
 			contentPane.setLayout(null);
 			
 			JLabel lblNewLabel = new JLabel("Name :");
-			lblNewLabel.setBounds(71, 33, 46, 14);
+			lblNewLabel.setBounds(56, 53, 46, 14);
 			contentPane.add(lblNewLabel);
 			
 			JLabel lblNewLabel_1 = new JLabel("Last Name :");
-			lblNewLabel_1.setBounds(46, 58, 71, 14);
+			lblNewLabel_1.setBounds(46, 84, 71, 14);
 			contentPane.add(lblNewLabel_1);
 			
 			JLabel lblNewLabel_2 = new JLabel("Telephone :");
-			lblNewLabel_2.setBounds(46, 80, 61, 14);
+			lblNewLabel_2.setBounds(46, 121, 71, 14);
 			contentPane.add(lblNewLabel_2);
 			
 			JLabel lblNewLabel_3 = new JLabel("Email :");
-			lblNewLabel_3.setBounds(74, 105, 46, 14);
+			lblNewLabel_3.setBounds(71, 146, 46, 14);
 			contentPane.add(lblNewLabel_3);
 			
-			textField = new JTextField();
-			textField.setBounds(125, 28, 132, 20);
-			contentPane.add(textField);
-			textField.setColumns(10);
+			txtMaria = new JTextField();
+			txtMaria.setText("Amalia");
+			txtMaria.setBounds(125, 50, 132, 20);
+			contentPane.add(txtMaria);
+			txtMaria.setColumns(10);
 			
-			textField_1 = new JTextField();
-			textField_1.setColumns(10);
-			textField_1.setBounds(125, 52, 132, 20);
-			contentPane.add(textField_1);
+			txtNicolaou = new JTextField();
+			txtNicolaou.setText("Petrou");
+			txtNicolaou.setColumns(10);
+			txtNicolaou.setBounds(125, 81, 132, 20);
+			contentPane.add(txtNicolaou);
 			
 			textField_2 = new JTextField();
+			textField_2.setText("99564257");
 			textField_2.setColumns(10);
-			textField_2.setBounds(125, 77, 132, 20);
+			textField_2.setBounds(127, 115, 132, 20);
 			contentPane.add(textField_2);
 			
-			textField_3 = new JTextField();
-			textField_3.setColumns(10);
-			textField_3.setBounds(125, 102, 132, 20);
-			contentPane.add(textField_3);
+			txtMnicolcsucyaccy = new JTextField();
+			txtMnicolcsucyaccy.setText("amaliap@outlook.com");
+			txtMnicolcsucyaccy.setColumns(10);
+			txtMnicolcsucyaccy.setBounds(125, 146, 132, 20);
+			contentPane.add(txtMnicolcsucyaccy);
 			
 			label = new JLabel("Interested for :");
-			label.setBounds(31, 140, 82, 14);
+			label.setBounds(28, 173, 89, 14);
 			contentPane.add(label);
 			
 			JCheckBox chckbxNewCheckBox = new JCheckBox("Sale");
-			chckbxNewCheckBox.setBounds(125, 154, 97, 23);
+			chckbxNewCheckBox.setSelected(true);
+			chckbxNewCheckBox.setBounds(125, 186, 97, 23);
 			contentPane.add(chckbxNewCheckBox);
 			
 			JCheckBox checkBox = new JCheckBox("Rent");
-			checkBox.setBounds(125, 180, 97, 23);
+			checkBox.setBounds(125, 212, 97, 23);
 			contentPane.add(checkBox);
 			
 			JLabel label_1 = new JLabel("Additional Information :");
-			label_1.setBounds(4, 214, 113, 14);
+			label_1.setBounds(0, 242, 141, 14);
 			contentPane.add(label_1);
 			
 			textField_4 = new JTextField();
 			textField_4.setColumns(10);
-			textField_4.setBounds(125, 235, 132, 74);
+			textField_4.setBounds(91, 267, 132, 74);
 			contentPane.add(textField_4);
+			
+			//JButton btnNewButton = new JButton("< Go Back");
+			//btnNewButton.setBounds(0, 353, 102, 23);
+			//contentPane.add(btnNewButton);
+			
+			JLabel lblNewLabel_4 = new JLabel("27/12/2018 16:00");
+			lblNewLabel_4.setForeground(Color.RED);
+			lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 14));
+			lblNewLabel_4.setBounds(4, 0, 141, 22);
+			contentPane.add(lblNewLabel_4);
+			
+			JLabel lblNewLabel_5 = new JLabel("Link");
+			lblNewLabel_5.setForeground(Color.BLUE);
+			lblNewLabel_5.setFont(new Font("Tahoma", Font.BOLD, 13));
+			lblNewLabel_5.setBounds(14, 33, 46, 14);
+			contentPane.add(lblNewLabel_5);
+			
+			JButton btnNewButton_1 = new JButton("< Go Back");
+			btnNewButton_1.setBounds(0, 364, 102, 23);
+			contentPane.add(btnNewButton_1);
+			btnNewButton_1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {		
+					Notifications not = new Notifications();		
+					not.setVisible(true);
+				}
+			});
+			
+			
+			
+			
 		}
 	}

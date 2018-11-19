@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.JEditorPane;
+import java.awt.SystemColor;
 
 public class Edit_Page extends JFrame {
 
@@ -41,31 +42,38 @@ public class Edit_Page extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.controlHighlight);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
 		JRadioButton rdbtnNewRadioButton = new JRadioButton(" \u0397ome Page");
+		rdbtnNewRadioButton.setBackground(SystemColor.controlHighlight);
 		rdbtnNewRadioButton.setBounds(6, 56, 109, 23);
 		contentPane.add(rdbtnNewRadioButton);
 		
 		JRadioButton rdbtnSelllet = new JRadioButton("Sell/Let");
+		rdbtnSelllet.setBackground(SystemColor.controlHighlight);
 		rdbtnSelllet.setBounds(6, 82, 109, 23);
 		contentPane.add(rdbtnSelllet);
 		
 		JRadioButton rdbtnTosaletorent = new JRadioButton("ToSale/ToRent");
+		rdbtnTosaletorent.setBackground(SystemColor.controlHighlight);
 		rdbtnTosaletorent.setBounds(6, 108, 109, 23);
 		contentPane.add(rdbtnTosaletorent);
 		
 		JRadioButton rdbtnNews = new JRadioButton("News");
+		rdbtnNews.setBackground(SystemColor.controlHighlight);
 		rdbtnNews.setBounds(6, 134, 109, 23);
 		contentPane.add(rdbtnNews);
 		
 		JRadioButton rdbtnAboutTheOrganization = new JRadioButton("About the organization");
+		rdbtnAboutTheOrganization.setBackground(SystemColor.controlHighlight);
 		rdbtnAboutTheOrganization.setBounds(6, 160, 146, 23);
 		contentPane.add(rdbtnAboutTheOrganization);
 		
 		JRadioButton rdbtnContactUs = new JRadioButton("Contact us");
+		rdbtnContactUs.setBackground(SystemColor.controlHighlight);
 		rdbtnContactUs.setBounds(6, 189, 109, 23);
 		contentPane.add(rdbtnContactUs);
 		

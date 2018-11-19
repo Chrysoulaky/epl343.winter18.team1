@@ -39,7 +39,7 @@ public class Statistics extends JFrame {
 	 */
 	public Statistics() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 814, 509);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -48,11 +48,11 @@ public class Statistics extends JFrame {
 		
 		JLabel lblStatistics = new JLabel("Statistics");
 		lblStatistics.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
-		lblStatistics.setBounds(175, 11, 121, 14);
+		lblStatistics.setBounds(365, 11, 121, 14);
 		contentPane.add(lblStatistics);
 		
 		JButton button = new JButton("< Go Back");
-		button.setBounds(0, 238, 109, 23);
+		button.setBounds(0, 448, 109, 23);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {		
 				AdminPanel adminP = new AdminPanel();		
@@ -62,13 +62,18 @@ public class Statistics extends JFrame {
 		contentPane.add(button);
 		
 		JButton button_1 = new JButton("Exit");
-		button_1.setBounds(345, 238, 89, 23);
+		button_1.setBounds(709, 448, 89, 23);
 		contentPane.add(button_1);
 		
-		setLayout(new BorderLayout());
-		setContentPane(new JLabel(new ImageIcon("C:\\Users\\Chrysoula\\Desktop\\4th year\\EPL361\\Project\\statistics.png")));
-		setSize(400,400);
-		setSize(400,400);
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\mnicol17\\statistics.png"));
+		lblNewLabel.setBounds(10, 36, 778, 401);
+		contentPane.add(lblNewLabel);
+		
+		//setLayout(new BorderLayout());
+	//	setContentPane(new JLabel(new ImageIcon("C:\\Users\\mnicol17\\statistics.png")));
+	//	setSize(400,400);
+		//setSize(400,400);
 		 
 	}
 }

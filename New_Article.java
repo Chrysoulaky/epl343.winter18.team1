@@ -10,6 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import javax.swing.JEditorPane;
+import java.awt.SystemColor;
 
 public class New_Article extends JFrame {
 
@@ -38,6 +39,7 @@ public class New_Article extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 519, 395);
 		contentPane = new JPanel();
+		contentPane.setBackground(SystemColor.controlHighlight);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -62,6 +64,12 @@ public class New_Article extends JFrame {
 		contentPane.add(editorPane);
 		
 		JButton button_2 = new JButton("Save and Publish");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Edit_Page edition=new Edit_Page();
+				edition.setVisible(true);
+			}
+		});
 		button_2.setBounds(57, 250, 164, 23);
 		contentPane.add(button_2);
 		
