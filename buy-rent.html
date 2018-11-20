@@ -234,17 +234,17 @@
     </div>
     <div class="collapse navbar-collapse col-sm-8" id="myNavbar" style="top: 15px;">
     	<ul class="nav navbar-nav">
-					<li><a href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/index_new.html">HOME</a></li>
+					<li><a href="index_new.html">HOME</a></li>
 					<li class="dropdown mega-dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICES<span class="caret"></span></a>				
 						<ul class="dropdown-menu" style="background: #f4511e;">
-				          	<li onclick="buyrent()"><a href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/buy-rent.html">BUY/RENT</a></li>
+				          	<li onclick="buyrent()"><a href="buy-rent.html">BUY/RENT</a></li>
 				          	<li><a href="#">SELL/RENT</a></li>
 		        		</ul>				
 					</li>
 		            
 		            <li><a href="#">ABOUT US</a></li>
-		  			<li onclick="contact()"><a href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/contact-us_new.html">CONTACT US</a></li>
+		  			<li onclick="contact()"><a href="contact-us_new.html">CONTACT US</a></li>
 		  			<li><a href="#">PROPERTY NEWS</a></li>
 				</ul>
 			</div>
@@ -446,6 +446,74 @@
       			</form>
     </div>
   </div>
+  <div class="row col-sm-12" style="font-size: 36px; margin-top: 20px;"><strong>Arrange a date with us</strong></div>
+  	 <div class="col-sm-12 row">                  
+                    <form id="ajax-contact"  method="post" action="#" role="form">
+                        <div class="messages" id="form-messages"></div>
+                        <div class="controls">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Firstname *</label>
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_lastname">Lastname *</label>
+                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_email">Email *</label>
+                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_phone">Phone*</label>
+                                        <input id="form_phone" type="tel" name="phone"  class="form-control" placeholder="Please enter your phone*" required oninvalid="setCustomValidity('Plz enter your correct phone number ')"
+    onchange="try{setCustomValidity('')}catch(e){}">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_message">Message *</label>
+                                        <textarea id="form_message" name="message" class="form-control" placeholder="Message *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_address">Address *</label>
+                                        <input id="form_address" type="text" name="address" class="form-control" placeholder="Please enter your address *" required="required" data-error="Address is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-black" value="Send message" style="font-size: 20px; background: transparent; border-color: white;">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                   <br>
+                                    <small class="text-muted" style="color: white;"><strong>*</strong> These fields are required.</small>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+    
+               </div>
 </div>
 
 
