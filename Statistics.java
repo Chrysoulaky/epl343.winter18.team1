@@ -13,6 +13,8 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.Canvas;
+import javax.swing.JComponent;
+import javax.swing.SwingUtilities;
 
 public class Statistics extends JFrame {
 
@@ -55,8 +57,9 @@ public class Statistics extends JFrame {
 		button.setBounds(0, 448, 109, 23);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {		
-				AdminPanel adminP = new AdminPanel();		
-				adminP.setVisible(true);
+				JComponent comp = (JComponent) e.getSource();
+				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
 			}
 		});
 		contentPane.add(button);
