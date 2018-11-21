@@ -19,6 +19,8 @@ import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
 import javax.swing.JCheckBox;
 import javax.swing.JEditorPane;
+import javax.swing.JComponent;
+import javax.swing.SwingUtilities;
 
 public class Properties extends JFrame {
 
@@ -62,9 +64,9 @@ public class Properties extends JFrame {
 		JButton button = new JButton("< Go Back");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Information information=new Information();
-				information.setVisible(true);
-
+				JComponent comp = (JComponent) e.getSource();
+				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
 			}
 		});
 		button.setBounds(0, 415, 109, 23);
