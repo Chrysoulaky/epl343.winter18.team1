@@ -13,6 +13,8 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
+import javax.swing.JComponent;
+import javax.swing.SwingUtilities;
 
 public class Properties_types extends JFrame {
 
@@ -49,8 +51,9 @@ public class Properties_types extends JFrame {
 		JButton button = new JButton("< Go Back");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Information infs=new Information();
-				infs.setVisible(true);
+				JComponent comp = (JComponent) e.getSource();
+				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
 			}
 		});
 		button.setBounds(0, 239, 109, 23);
