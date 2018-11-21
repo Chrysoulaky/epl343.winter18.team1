@@ -12,6 +12,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.SystemColor;
+import javax.swing.JComponent;
+import javax.swing.SwingUtilities;
 
 public class Information extends JFrame {
 
@@ -101,8 +103,9 @@ public class Information extends JFrame {
 		btnNewButton_2.setBounds(0, 238, 109, 23);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {		
-				AdminPanel adminP = new AdminPanel();		
-				adminP.setVisible(true);
+				 JComponent comp = (JComponent) e.getSource();
+				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
 				
 			}
 		});
