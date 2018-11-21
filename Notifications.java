@@ -26,7 +26,8 @@ import java.awt.SystemColor;
 import javax.swing.UIManager;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
-
+import javax.swing.JComponent;
+import javax.swing.SwingUtilities;
 
 public class Notifications extends JFrame {
 
@@ -78,10 +79,9 @@ public class Notifications extends JFrame {
 		contentPane.add(button);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
-				AdminPanel adminP = new AdminPanel();		
-				adminP.setVisible(true);
-				
+				 JComponent comp = (JComponent) e.getSource();
+				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
 				
 			}
 		});
