@@ -11,6 +11,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import javax.swing.JEditorPane;
 import java.awt.SystemColor;
+import javax.swing.JComponent;
+import javax.swing.SwingUtilities;
 
 public class New_Article extends JFrame {
 
@@ -46,6 +48,13 @@ public class New_Article extends JFrame {
 		
 		JButton button = new JButton("< Go Back");
 		button.setBounds(0, 333, 109, 23);
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {		
+				 JComponent comp = (JComponent) e.getSource();
+				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
+			}
+		});
 		contentPane.add(button);
 		
 		JButton button_1 = new JButton("Exit");
