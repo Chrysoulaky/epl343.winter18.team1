@@ -13,7 +13,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-
+import javax.swing.JComponent;
+import javax.swing.SwingUtilities;
 public class Collaborator_Form extends JFrame {
 
 	private JPanel contentPane;
@@ -54,8 +55,9 @@ public class Collaborator_Form extends JFrame {
 		JButton btnNewButton = new JButton("< Go Back");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Information frame = new Information();
-				frame.setVisible(true);
+				 JComponent comp = (JComponent) e.getSource();
+				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
 			}
 		});
 		contentPane.setLayout(null);
