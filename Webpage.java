@@ -10,7 +10,6 @@ import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JRadioButtonMenuItem;
@@ -21,6 +20,8 @@ import java.awt.SystemColor;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.Component;
+import javax.swing.JComponent;
+import javax.swing.SwingUtilities;
 
 public class Webpage extends JFrame {
 
@@ -82,8 +83,9 @@ public class Webpage extends JFrame {
 		btnNewButton_2.setBounds(0, 238, 109, 23);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {		
-				AdminPanel adminP = new AdminPanel();		
-				adminP.setVisible(true);
+				JComponent comp = (JComponent) e.getSource();
+				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
 			}
 		});
 		contentPane.add(btnNewButton_2);
