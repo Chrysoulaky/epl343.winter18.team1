@@ -13,6 +13,8 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import java.awt.Font;
+import javax.swing.JComponent;
+import javax.swing.SwingUtilities;
 
 public class Customer_Form extends JFrame {
 
@@ -52,8 +54,9 @@ public class Customer_Form extends JFrame {
 		JButton btnNewButton = new JButton("< Go Back");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Information frame = new Information();
-				frame.setVisible(true);
+				 JComponent comp = (JComponent) e.getSource();
+				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
 			}
 		});
 		contentPane.setLayout(null);
