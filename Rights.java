@@ -15,6 +15,8 @@ import java.awt.Font;
 import javax.swing.JTable;
 import java.awt.Checkbox;
 import java.awt.List;
+import javax.swing.JComponent;
+import javax.swing.SwingUtilities;
 
 public class Rights extends JFrame {
 
@@ -51,8 +53,9 @@ public class Rights extends JFrame {
 		JButton button = new JButton("< Go Back");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				EmployeesForm frame = new EmployeesForm();
-				frame.setVisible(true);
+				JComponent comp = (JComponent) e.getSource();
+				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
 			
 			}
 		});
