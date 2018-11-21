@@ -15,6 +15,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Font;
+import javax.swing.JComponent;
+import javax.swing.SwingUtilities;
 
 public class Delete_Article extends JFrame {
 
@@ -74,8 +76,9 @@ public class Delete_Article extends JFrame {
 		button.setBounds(0, 268, 109, 23);
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Edit_Page info = new Edit_Page();		
-				info.setVisible(true);
+				 JComponent comp = (JComponent) e.getSource();
+				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
 			}
 		});
 		contentPane.add(button);
