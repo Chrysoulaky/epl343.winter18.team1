@@ -3,7 +3,7 @@
 	.dropdown-menu a:hover {background-color: #337ab7;}
 	.dropdown:hover .dropdown-menu {display: block;}
 	.dropdown:hover .dropbtn {background-color: #3e8e41;}
-html, body { height: 100%; min-height: 1500px; width: 100%; }
+html, body { height: 100%; width: 100%; }
 	.login-container {
     background: transparent url(town.jpg) center center;
     background-size: cover;
