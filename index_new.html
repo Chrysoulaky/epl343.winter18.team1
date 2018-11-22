@@ -236,23 +236,28 @@
 					<li class="dropdown mega-dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICES<span class="caret"></span></a>				
 						<ul class="dropdown-menu" style="background: #f4511e;">
-				          	<li onclick="buyrent()"><a href="buy-rent.html">BUY/RENT</a></li>
-				          	<li><a href="sell-rent.html">SELL/RENT</a></li>
+				          	<li onclick="buyrent()"><a href="buy-rent.html">TO SALE / TO RENT</a></li>
+				          	<li><a href="sell-rent.html">SELL / LET</a></li>
 		        		</ul>				
 					</li>
 		            
-		            <li><a href="#">ABOUT US</a></li>
+		            <li><a href="about_us.html">ABOUT US</a></li>
 		  			<li onclick="contact()"><a href="contact-us_new.html">CONTACT US</a></li>
-		  			<li><a href="#">PROPERTY NEWS</a></li>
+		  			<li><a href="news.html">NEWS</a></li>
 				</ul>
 			</div>
-			<!-- <div class="collapse navbar-collapse col-sm-4" style="float: right;">
-		      <ul class="nav navbar-nav navbar-right navbarright2" id="navbarright2" name="navbarright2">
-		        <li><a href="#about">ABOUT</a></li>
-		        <li><a href="#services">SERVICES</a></li>
-		        <li><a href="#portfolio">PORTFOLIO</a></li>
-		      </ul>
-    		</div> -->
+			<!-- <div class="collapse navbar-collapse col-sm-4" style="float: right;"> -->
+	       
+          <!-- <li class="dropdown mega-dropdown col-sm-4" style="float: right; top: 15px;">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language<span class="caret"></span></a>        
+            <ul class="dropdown-menu" style="background: #f4511e;">
+                    <li><a href="#">Greek</a></li>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Russia</a></li>
+                </ul>       
+          </li> -->
+    		<!-- </div> -->
+
   		</div>
 	</nav>
 
@@ -597,6 +602,9 @@
 		 
 	// 	}
 	// } 
+  $(function(){
+    $('.selectpicker').selectpicker();
+});
 
 	function btnminus(){
 		 var now = $(".m1").val();

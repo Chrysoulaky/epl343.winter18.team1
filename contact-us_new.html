@@ -22,6 +22,7 @@
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
       color: #818181;
+      background: linear-gradient(to left, #f4511e , #565671);
   }
   h2 {
       font-size: 24px;
@@ -322,66 +323,25 @@ a.socialIcon:hover, .socialHoverClass {
     </div>
     <div class="collapse navbar-collapse col-sm-8" id="myNavbar" style="top: 15px;">
     	<ul class="nav navbar-nav">
-					<li><a href="index_new.html">HOME</a></li>
-					<li class="dropdown mega-dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICES<span class="caret"></span></a>				
-						<ul class="dropdown-menu" style="background: #f4511e;">
-				          	<li onclick="buyrent()"><a href="buy-rent.html">BUY/RENT</a></li>
-				          	<li><a href="sell-rent.html">SELL/RENT</a></li>
-		        		</ul>				
-					</li>
-		            
-		            <li><a href="#">ABOUT US</a></li>
-		  			<li onclick="contact()"><a href="contact-us_new.html">CONTACT US</a></li>
-		  			<li><a href="#">PROPERTY NEWS</a></li>
-				</ul>
+          <li><a href="index_new.html">HOME</a></li>
+          <li class="dropdown mega-dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICES<span class="caret"></span></a>        
+            <ul class="dropdown-menu" style="background: #f4511e;">
+                    <li onclick="buyrent()"><a href="buy-rent.html">TO SALE / TO RENT</a></li>
+                    <li><a href="sell-rent.html">SELL / LET</a></li>
+                </ul>       
+          </li>
+                
+                <li><a href="about_us.html">ABOUT US</a></li>
+            <li onclick="contact()"><a href="contact-us_new.html">CONTACT US</a></li>
+            <li><a href="news.html">NEWS</a></li>
+        </ul>
 			</div>
 			
   </div>
 </nav>
 
-	<!-- <div class="container-fluid col-sm-12" style="margin-top: 60px;"> -->
-
-		<!-- <section id="contact">
-			<div class="section-content">
-				<h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
-				<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>
-			</div>
-			<div class="contact-section">
-			<div class="container">
-				<form>
-					<div class="col-sm-6 form-line">
-			  			<div class="form-group">
-			  				<label for="exampleInputUsername">Your name</label>
-					    	<input type="text" class="form-control" id="" placeholder=" Enter Name"  style="font-size: 20px;">
-				  		</div>
-				  		<div class="form-group">
-					    	<label for="exampleInputEmail">Email Address</label>
-					    	<input type="email" class="form-control" id="exampleInputEmail" placeholder=" Enter Email id" style="font-size: 20px;">
-					  	</div>	
-					  	<div class="form-group">
-					    	<label for="telephone">Mobile No.</label>
-					    	<input type="tel" class="form-control" id="telephone" placeholder=" Enter 8-digit mobile no." style="font-size: 20px;">
-			  			</div>
-			  		</div>
-			  		<div class="col-sm-6">
-			  			<div class="form-group">
-			  				<label for ="description"> Message</label>
-			  			 	<textarea  class="form-control" id="description" placeholder="Enter Your Message" style="font-size: 20px;"></textarea>
-			  			</div>
-			  			<div>
-
-			  				<button type="button" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
-			  			</div>
-			  			
-					</div>
-				</form>
-			</div>
-		</section> -->
-
-	<!-- </div> -->
-
-	<div class="contact" id="contact">
+	<div class="contact" id="contact" style="font-family: Calibri;">
        <div class="container-fluid">
           <div class="contact-form">
            <div class="row">
@@ -415,7 +375,7 @@ a.socialIcon:hover, .socialHoverClass {
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="form_phone">Phone*</label>
+                                        <label for="form_phone">Phone *</label>
                                         <input id="form_phone" type="tel" name="phone"  class="form-control" placeholder="Please enter your phone*" required oninvalid="setCustomValidity('Plz enter your correct phone number ')"
     onchange="try{setCustomValidity('')}catch(e){}">
                                         
@@ -445,13 +405,13 @@ a.socialIcon:hover, .socialHoverClass {
                     </form>
     
                </div>
-               <div class="col-sm-5" style="margin-top: 50px;">
+               <div class="col-sm-5" style="margin-top: 50px; font-size: 19px;">
                    <div class="row col1">
                        <div class="col-sm-3">
                            <i class="fa fa-map-marker" style="font-size:16px;"></i>   Address
                        </div>
                        <div class="col-sm-9">
-                            One Gateway Center, Suite 25500+,<br> Newark 23, NJ 10235
+                            4060 Potamos Yermasoyias Limassol,<br> Cyprus P.O. Box 52062
                        </div>
                    </div>
                    
@@ -460,7 +420,7 @@ a.socialIcon:hover, .socialHoverClass {
                             <i class="fa fa-phone"></i>   Phone
                         </div>
                         <div class="col-sm-9">
-                             +(91) 123 277 4239
+                             25313031, 99661616
                         </div>
                     </div>
                     <div class="row col1">
@@ -468,7 +428,7 @@ a.socialIcon:hover, .socialHoverClass {
                              <i class="fa fa-fax"></i>    Fax  
                         </div>
                         <div class="col-sm-9">
-                              123 123 4567
+                              25329293
                         </div>
                     </div>
                     <div class="row col1">
@@ -476,15 +436,15 @@ a.socialIcon:hover, .socialHoverClass {
                             <i class="fa fa-envelope"></i>   Email
                         </div>
                         <div class="col-sm-9">
-                             <a href="mailto:info@yourdomain.com">info@yourdomain.com</a> <br> <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+                             <a href="mailto:info@yourdomain.com" style="background-color: transparent; color: white">info@orphanouestates.com</a>
                         </div>
                     </div>
                     <div class="row col1">
                         <div class="col-sm-3">
-                            <i class="fa fa-building"></i>   Working Hours
+                            <i class="fa fa-building"></i>   Hours
                         </div>
                         <div class="col-sm-9">
-                             Mon-Fri 09:00 - 18:00
+                             Mon-Fri 08:00 - 18:00, Sat 10:00-13:00
                         </div>
                     </div><br>
                     <iframe width="100%" height="230" frameborder="0" style="border-radius:0px;" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?client=firefox-a&ie=UTF8&q=ethane+web+technologies&fb=1&gl=in&hq=ethane+web+technologies&cid=8183905562449910042&t=m&ll=28.639225,77.390442&spn=0.052731,0.154495&z=13&iwloc=A&output=embed"  style="border-radius:20px;"></iframe>
@@ -510,8 +470,8 @@ a.socialIcon:hover, .socialHoverClass {
 
 <script>
 	$(document).ready(function(){
-		var h = $(document).height();
-		document.getElementById('contact').style.height = h +"px";
+		// var h = $(document).height();
+		// document.getElementById('contact').style.height = h +"px";
 
     $(".dropdown").hover(            
         function() {

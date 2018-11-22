@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<title>Orphanou Estates</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link rel="stylesheet" href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/style.css"> -->
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<style>
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: white;
+      background: linear-gradient(to left, #f4511e , #565671);
+      /*min-height: 100%;*/
+  }
+ 
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+
+ 
+  .navbar {
+      margin-bottom: 0;
+      background-color: #f4511e;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #f4511e !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+
+  .form-control{
+		display: unset;
+	}
+
+	a {
+    background-color: #f4511e;
+	}
+
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+
+
+.about-section {
+    padding: 4em 0;
+}
+.site-title  {
+    padding: 2em 0;
+}
+.site-title h3 {
+    font-size: 3.5em;
+    color: white;
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+.site-title p {
+    font-size: 1.1em;
+    color: white;
+    line-height: 1.8em;
+    margin-top: 0.5em;
+}
+
+.about-inner-column h4 {
+    font-size: 2.5em;
+    color: #FFD001;
+    font-family: Montserrat, sans-serif;
+}
+.about-inner-column p {
+    font-size: 1.1em;
+    color: #333333;
+    line-height: 1.8em;
+    margin: 1em 0 0;
+}
+
+.about-inner-column ul li a {
+    color: #333333;
+    font-size: 1.1em;
+    padding-left: 2em;
+}
+.about-right img {
+    width: 100%;
+}
+
+
+
+/*a {
+ background-color: #D3D3D3;   
+}*/
+
+
+  </style>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top" style="height: 80px;">
+  <div class="container" style="width: 100%;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index_new.html"><img name="img" src="logo.png" height="50px" width="155px"></a>
+    </div>
+    <div class="collapse navbar-collapse col-sm-8" id="myNavbar" style="top: 15px;">
+    	<ul class="nav navbar-nav">
+          <li><a href="index_new.html">HOME</a></li>
+          <li class="dropdown mega-dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICES<span class="caret"></span></a>        
+            <ul class="dropdown-menu" style="background: #f4511e;">
+                    <li onclick="buyrent()"><a href="buy-rent.html">TO SALE / TO RENT</a></li>
+                    <li><a href="sell-rent.html">SELL / LET</a></li>
+                </ul>       
+          </li>
+                
+                <li><a href="about_us.html">ABOUT US</a></li>
+            <li onclick="contact()"><a href="contact-us_new.html">CONTACT US</a></li>
+            <li><a href="news.html">NEWS</a></li>
+        </ul>
+			</div>
+			
+  </div>
+</nav>
+
+	<div class="about-section" style="margin-top: 5px;">
+    <div class="container">
+      <div class="site-title text-center">
+        <h3><strong>About Us</strong></h3>
+        <p>We are always pleasure to help you, by searching for you the property that will makes you happy!</p>
+      </div>
+      <div class="about-inner-section">       
+        <div class="col-md-6 about-inner-column">
+          <h4>A successful company is our company</h4>
+          <p style="color: white;">“Orphanou Nicos Estates” is the name of a small real estate agency owned by Mr. Nicos Orphanou. It is located in Amathus Area, east of Limassol, Cyprus. The organization was established in January 1992 and has four customers, but also has many associates from all the cities in Cyprus. The real estate agency provides services in a property market such as sales and lettings for customers, who are interested to buy, sell or rent houses, plots/lands, storage buildings, offices, apartments etc. Nicos Orphanou is responsible to find properties that the customers interested in and give then a tour.</p>
+        
+        </div>
+        <div class="col-md-6 about-right">
+        <img src="r2.jpg" alt=" ">
+      </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+
+
+
+	
+
+</body>
+
+<script>
+	$(document).ready(function(){
+		var h = $(document).height();
+		document.getElementById('contact').style.height = h +"px";
+
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+            $(this).toggleClass('open');       
+        }
+    );
+
+    
+// var previousScroll = 0;
+//     $(window).scroll(function(){
+
+//     var currentScroll = $(this).scrollTop();
+
+//     /*
+//       If the current scroll position is greater than 0 (the top) AND the current scroll position is less than the document height minus the window height (the bottom) run the navigation if/else statement.
+//     */
+//     if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()){
+//       /*
+//         If the current scroll is greater than the previous scroll (i.e we're scrolling down the page), hide the nav.
+//       */
+//       if (currentScroll > previousScroll){
+//         window.setTimeout(hideNav, 10);
+//       /*
+//         Else we are scrolling up (i.e the previous scroll is greater than the current scroll), so show the nav.
+//       */
+//       } else {
+//         window.setTimeout(showNav, 10);
+//       }
+//       /* 
+//         Set the previous scroll value equal to the current scroll.
+//       */
+//       previousScroll = currentScroll;
+//     }
+
+//   });
+
+//   function hideNav() {
+//     $("[data-nav-status='toggle']").removeClass("show").addClass("hidden");
+//   }
+//   function showNav() {
+//     $("[data-nav-status='toggle']").removeClass("hidden").addClass("show");
+//   }
+});
+</script>
