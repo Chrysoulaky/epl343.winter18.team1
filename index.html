@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<title>Orphanou Estates</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/style.css">
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/rangeslider.js/2.3.0/rangeslider.min.js"></script>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Oleo+Script:400,700" rel="stylesheet">
+   	<link href="https://fonts.googleapis.com/css?family=Teko:400,700" rel="stylesheet">
+   	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+   	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+<!------ Include the above in your HEAD tag ---------->
+</head>
+<body>
+	<div class="container-fluid" style="width: 100%; padding-left: 0px;">
+	  	<nav class="navbar navbar-inverse visible " data-nav-status="toggle" id="navbar" name="navbar" style="z-index: 500; position: fixed; top: 0; width: 100%; border-radius:0px;">
+		    <div class="navbar-header">
+		    	<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">My Store</a>
+			</div>
+			
+			<div class="collapse navbar-collapse js-navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/index.html">HOME</a></li>
+					<li class="dropdown mega-dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICES<span class="caret"></span></a>				
+						<ul class="dropdown-menu" style="background: #337ab7;">
+				          	<li onclick="buyrent()"><a href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/buy-rent.html">BUY/RENT</a></li>
+				          	<li><a href="#">SELL/RENT</a></li>
+		        		</ul>				
+					</li>
+		            
+		            <li><a href="#">ABOUT US</a></li>
+		  			<li onclick="contact()"><a href="C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/contact-us.html">CONTACT US</a></li>
+		  			<li><a href="#">PROPERTY NEWS</a></li>
+				</ul>
+		        <!-- <ul class="nav navbar-nav navbar-right">
+			        <li class="dropdown">
+			          	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My account <span class="caret"></span></a>
+			          	<ul class="dropdown-menu" role="menu">
+				            <li><a href="#">Action</a></li>
+				            <li><a href="#">Another action</a></li>
+				            <li><a href="#">Something else here</a></li>
+				            <li class="divider"></li>
+				            <li><a href="#">Separated link</a></li>
+			          	</ul>
+			        </li>
+			        <li><a href="#">My cart (0) items</a></li>
+		      	</ul> -->
+			</div>
+	  	</nav>
+	</div>
+	<div class="container" style="width:100%;">
+	  	<div id="myCarousel" data-ride="carousel" class="carousel slide d-flex justify-content-center">
+		  <!-- Menu -->
+		  	<ol class="carousel-indicators">
+			    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			    <li data-target="#myCarousel" data-slide-to="1"></li>
+			    <li data-target="#myCarousel" data-slide-to="2"></li>
+		  	</ol>
+		    
+		  <!-- Items -->
+		  	<div class="carousel-inner">
+		      
+		      	<!-- Item 1 -->
+		    	<div class="item active">
+		        	<img src="1.jpg" style="width:100%;">
+			      	<!-- <div class="container"> -->
+			        	<div class="carousel-caption">
+			          		<h1>Bootstrap 3 Carousel Layout</h1>
+			          		<p>This is an example layout with carousel that uses the Bootstrap 3 styles.</p>
+			          		<p><a class="btn btn-lg btn-primary" href="http://getbootstrap.com">Learn More</a>
+			        		</p>
+			        	</div>
+			      	<!-- </div> -->
+			    </div>
+		      
+		      	<!-- Item 2 -->
+			    <div class="item">
+		        	<img src="2.jpg" style="width:100%;">
+			      	<!-- <div class="container"> -->
+			        	<div class="carousel-caption">
+				         	<h1>Changes to the Grid</h1>
+				          	<p>Bootstrap 3 still features a 12-column grid, but many of the CSS class names have completely changed.</p>
+				          	<p><a class="btn btn-large btn-primary" href="#">Learn more</a></p>
+			        	</div>
+			      	<!-- </div> -->
+			    </div>
+		      
+		      	<!-- Item 3 -->
+			    <div class="item">
+			        <img src="3.jpg" style="width:100%;">
+			      	<!-- <div class="container"> -->
+			        	<div class="carousel-caption">
+			          		<h1>Percentage-based sizing</h1>
+		          			<p>With "mobile-first" there is now only one percentage-based grid.</p>
+			          		<p><a class="btn btn-large btn-primary" href="#">Browse gallery</a></p>
+			        	</div>
+			      	<!-- </div> -->
+			    </div>
+		  	</div>
+			  <!-- Controls -->
+		  	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		    	 <span class="glyphicon glyphicon-chevron-left" style="font-size: 15px;"></span>
+		      	<span class="sr-only">Previous</span>
+    		</a>
+    		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+      			<span class="glyphicon glyphicon-chevron-right" style="font-size: 15px;"></span>
+      			<span class="sr-only">Next</span>
+    		</a>
+		  	<!-- <div id="carouselButtons">
+		      	<button id="playButton" type="button" class="btn btn-default btn-xs">
+		          	<span class="glyphicon glyphicon-play"></span>
+		       	</button>
+		      	<button id="pauseButton" type="button" class="btn btn-default btn-xs">
+		          	<span class="glyphicon glyphicon-pause"></span>
+		      	</button>
+		  	</div> -->
+		</div>
+	</div>
+
+
+
+
+
+
+	<section class="login-container">
+    	<div class="container auth active col-sm-9" style="position: absolute;">
+    		<div id="big-form" class="well auth-box col-sm-9">
+      			<form>
+        			<fieldset>
+
+          <!-- Form Name -->
+		          		<legend>Quick Search</legend>
+
+		          <!-- Password input-->
+		           <!-- Multiple Checkboxes (inline) -->
+		           		<div class="col-sm-6 form-line">
+			      			<div class="form-group">
+			            		<label class=" control-label" for="checkboxes">Interested for</label>
+			            		<div class="">
+				              		<label class="checkbox-inline" for="checkboxes-0">
+				                		<input name="checkboxes" id="checkboxes-0" value="1" type="checkbox">
+				                		Buy
+				              		</label>
+				              		<label class="checkbox-inline" for="checkboxes-1">
+				                		<input name="checkboxes" id="checkboxes-1" value="2" type="checkbox">
+				                		Rent
+				              		</label>             
+			            		</div>
+			          		</div>
+
+
+			          <!-- Select Basic -->
+				          	<div class="form-group">
+				            	<label class=" control-label" for="selectbasic">Town</label>
+				            	<div class="">
+				              		<select id="selectbasic" name="selectbasic" class="form-control">
+						                <option value="1">Nicosia</option>
+						                <option value="2">Larnaca</option>
+						                <option value="3">Limassol</option>
+						                <option value="4">Paphos</option>
+						                <option value="5">Famagusta</option>
+				              		</select>
+				            	</div>
+				          	</div>
+
+				          	<div class="form-group">
+				            	<label class=" control-label" for="searchinput">Area</label>
+				            	<div class="">
+				              		<input id="searchinput" name="searchinput" placeholder="Search for specific area" class="form-control input-md" type="search">
+				            	</div>
+				          	</div>
+
+				          	<div class="form-group">
+				            	<label class=" control-label" for="selectbasic">Property's Type</label>
+				            	<div class="">
+				              		<select id="selectbasic" name="selectbasic" class="form-control">
+						                <option value="1">Apartment</option>
+						                <option value="2">Building</option>
+						                <option value="3">House</option>
+						                <option value="4">Field</option>
+						                <option value="5">Office</option>
+						                <option value="6">Plot</option>
+						                <option value="7">Warehouse</option>
+						                <option value="8">Store</option>
+				              		</select>
+				            	</div>
+				          	</div>
+
+				          	<div class="form-group">
+			            		<label class="control-label" for="radios">Subtype of Property</label>
+			            		<div class=""> 
+			              			<label class="radio-inline" for="radios-0">
+			                			<input name="radios" id="radios-0" value="1" type="radio">
+			                			Residential
+			              			</label> 
+			              			<label class="radio-inline" for="radios-1">
+			                			<input name="radios" id="radios-1" value="2" type="radio">
+			                			Commercial
+			              			</label> 
+			              			<label class="radio-inline" for="radios-2">
+			                			<input name="radios" id="radios-2" value="3" type="radio">
+			                			Industrial
+			              			</label> 
+			            		</div>
+			          		</div>
+
+			          	</div>
+
+			          	<div class="col-sm-3"> 
+
+			          		<div class="form-group">
+			            		<label class="control-label" for="radios">Furnished</label>
+			            		<div class="">
+			              			<div class="radio">
+			                			<label for="radios-0">
+			                  				<input name="radios" id="radios-0" value="1" checked="checked" type="radio">
+			                  				Yes
+			                			</label>
+			              			</div>
+			              			<div class="radio">
+			                			<label for="radios-1">
+			                  				<input name="radios" id="radios-1" value="2" type="radio">
+			                  				No
+			                			</label>
+			              			</div>
+			            		</div>
+			          		</div>
+
+			          		<div class="form-group">
+			            		<label class="control-label" for="radios">Rooms</label>
+			            		<div class="section">   
+			            			<div style="display:inline-flex;">              
+			                            <div class="btn-minus"><span class="glyphicon glyphicon-minus"></span></div>
+			                            <input value="1" id="m1" name="m1" class="m1" style="width: 30px; text-align: center;">
+			                            <div class="btn-plus"><span class="glyphicon glyphicon-plus"></span></div>
+			                        </div>
+			               		</div>
+			              	</div>
+			                   
+			                <div class="form-group">
+			            		<label class="control-label" for="radios">Min Price (€)</label>
+			            		<div class="section">   
+			            			<div style="display:inline-flex;">              
+			                            <div class="btn-minus2"><span class="glyphicon glyphicon-minus"></span></div>
+			                            <input value="1" id="m2" name="m2" class="m2" style="width: 100px; text-align: center;">
+			                            <div class="btn-plus2"><span class="glyphicon glyphicon-plus"></span></div>
+			                        </div>
+			               		</div>
+			              	</div>
+
+			              	<div class="form-group">
+			            		<label class="control-label" for="radios">Max Price (€)</label>
+			            		<div class="section">   
+			            			<div style="display:inline-flex;">              
+			                            <div class="btn-minus3"><span class="glyphicon glyphicon-minus"></span></div>
+			                            <input value="1" id="m3" name="m3" class="m3" style="width: 100px; text-align: center;">
+			                            <div class="btn-plus3"><span class="glyphicon glyphicon-plus"></span></div>
+			                        </div>
+			               		</div>
+			              	</div>
+
+			              	<div class="form-group">
+		            			<div class="">
+		              				<button id="singlebutton" name="singlebutton" class="btn btn-default" style="width: 150px;">Search</button>
+		            			</div>
+		          			</div>
+
+			            </div>
+	    			</fieldset>
+      			</form>
+    		</div>
+
+
+  		</div>
+  		 		<h2>What our customers say</h2>
+  <div id="myCarousel2" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel2" data-slide-to="1"></li>
+      <li data-target="#myCarousel2" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"This company is the best. I am so happy with the result!"<br><span>Michael Roe, Vice President, Comment Box</span></h4>
+      </div>
+      <div class="item">
+        <h4>"One word... WOW!!"<br><span>John Doe, Salesman, Rep Inc</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Could I... BE any more happy with this company?"<br><span>Chandler Bing, Actor, FriendsAlot</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+ 
+	</section>
+
+
+
+	
+
+</body>
+
+<script>
+	function contact(){
+		location.replace("C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/contact-us.html");
+	} 
+	function buyrent(){
+		location.replace("C:/Users/Admin/Desktop/Computer Science UCY/Webpage epl361/buy-rent.html");
+	} 
+	
+	(function(e,t,n,r){function o(t,n){this.$element=e(t);this.settings=e.extend({},s,n);this.init()}var i="floatlabel",s={slideInput:true,labelStartTop:"20px",labelEndTop:"10px",transitionDuration:.3,transitionEasing:"ease-in-out",labelClass:"",typeMatches:/text|password|email|number|search|url/};o.prototype={init:function(){var e=this;var n={"-webkit-transition":"all "+this.settings.transitionDuration+"s "+this.settings.transitionEasing,"-moz-transition":"all "+this.settings.transitionDuration+"s "+this.settings.transitionEasing,"-o-transition":"all "+this.settings.transitionDuration+"s "+this.settings.transitionEasing,"-ms-transition":"all "+this.settings.transitionDuration+"s "+this.settings.transitionEasing,transition:"all "+this.settings.transitionDuration+"s "+this.settings.transitionEasing};if(this.$element.prop("tagName").toUpperCase()!=="INPUT"){return}if(!this.settings.typeMatches.test(this.$element.attr("type"))){return}var r=this.$element.attr("id");if(!r){r=Math.floor(Math.random()*100)+1;this.$element.attr("id",r)}var i=this.$element.attr("placeholder");var s=this.$element.data("label");var o=this.$element.data("class");if(!o){o=""}if(!i||i===""){i="You forgot to add placeholder attribute!"}if(!s||s===""){s=i}this.inputPaddingTop=parseFloat(this.$element.css("padding-top"))+10;this.$element.wrap('<div class="floatlabel-wrapper" style="position:relative"></div>');this.$element.before('<label for="'+r+'" class="label-floatlabel '+this.settings.labelClass+" "+o+'">'+s+"</label>");this.$label=this.$element.prev("label");this.$label.css({position:"absolute",top:this.settings.labelStartTop,left:this.$element.css("padding-left"),display:"none","-moz-opacity":"0","-khtml-opacity":"0","-webkit-opacity":"0",opacity:"0"});if(!this.settings.slideInput){this.$element.css({"padding-top":this.inputPaddingTop})}this.$element.on("keyup blur change",function(t){e.checkValue(t)});t.setTimeout(function(){e.$label.css(n);e.$element.css(n)},100);this.checkValue()},checkValue:function(e){if(e){var t=e.keyCode||e.which;if(t===9){return}}var n=this.$element.data("flout");if(this.$element.val()!==""){this.$element.data("flout","1")}if(this.$element.val()===""){this.$element.data("flout","0")}if(this.$element.data("flout")==="1"&&n!=="1"){this.showLabel()}if(this.$element.data("flout")==="0"&&n!=="0"){this.hideLabel()}},showLabel:function(){var e=this;e.$label.css({display:"block"});t.setTimeout(function(){e.$label.css({top:e.settings.labelEndTop,"-moz-opacity":"1","-khtml-opacity":"1","-webkit-opacity":"1",opacity:"1"});if(e.settings.slideInput){e.$element.css({"padding-top":e.inputPaddingTop})}},50)},hideLabel:function(){var e=this;e.$label.css({top:e.settings.labelStartTop,"-moz-opacity":"0","-khtml-opacity":"0","-webkit-opacity":"0",opacity:"0"});if(e.settings.slideInput){e.$element.css({"padding-top":parseFloat(e.inputPaddingTop)-10})}t.setTimeout(function(){e.$label.css({display:"none"})},e.settings.transitionDuration*1e3)}};e.fn[i]=function(t){return this.each(function(){if(!e.data(this,"plugin_"+i)){e.data(this,"plugin_"+i,new o(this,t))}})}})(jQuery,window,document)
+
+	$(document).ready(function(){	
+
+	 
+
+		//-- Click on QUANTITY
+            $(".btn-minus").on("click",function(){
+                var now = $(".m1").val();
+                if ($.isNumeric(now)){
+                    if (parseInt(now) -1 > 0){ now--;}
+                    $(".m1").val(now);
+                }else{
+                    $(".m1").val("1");
+                }
+            });           
+            $(".btn-plus").on("click",function(){
+                var now = $(".m1").val();
+                if ($.isNumeric(now)){
+                    $(".m1").val(parseInt(now)+1);
+                }else{
+                    $(".m1").val("1");
+                }
+            });       
+
+             $(".btn-minus2").on("click",function(){
+                var now2 = $(".m2").val();
+                
+                if ($.isNumeric(now2)){
+                    if (parseInt(now2) -1 > 0){ now2=now2 - 10;}
+                    $(".m2").val(now2);
+                }else{
+                    $(".m2").val("1");
+                }
+            });           
+            $(".btn-plus2").on("click",function(){
+                var now2 = $(".m2").val();
+                if ($.isNumeric(now2)){
+                    $(".m2").val(parseInt(now2)+10);
+                }else{
+                    $(".m2").val("1");
+                }
+            });       
+
+             $(".btn-minus3").on("click",function(){
+                var now3 = $(".m3").val();
+                if ($.isNumeric(now3)){
+                    if (parseInt(now3) -1 > 0){ now3=now3-10;}
+                    $(".m3").val(now3);
+                }else{
+                    $(".m3").val("1");
+                }
+            });           
+            $(".btn-plus3").on("click",function(){
+                var now3 = $(".m3").val();
+                if ($.isNumeric(now3)){
+                    $(".m3").val(parseInt(now3)+10);
+                }else{
+                    $(".m3").val("1");
+                }
+            });          
+
+		$(function () {
+		    $('#myCarousel').carousel({
+		        interval:2000,
+		        pause: "false"
+		    });
+		    
+	});
+
+		$('input').floatlabel();
+  $('a, button').click(function(e){
+    e.preventDefault();
+  });
+
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
+            $(this).toggleClass('open');       
+        }
+    );
+
+    
+var previousScroll = 0;
+    $(window).scroll(function(){
+
+    var currentScroll = $(this).scrollTop();
+
+    /*
+      If the current scroll position is greater than 0 (the top) AND the current scroll position is less than the document height minus the window height (the bottom) run the navigation if/else statement.
+    */
+    if (currentScroll > 0 && currentScroll < $(document).height() - $(window).height()){
+      /*
+        If the current scroll is greater than the previous scroll (i.e we're scrolling down the page), hide the nav.
+      */
+      if (currentScroll > previousScroll){
+        window.setTimeout(hideNav, 10);
+      /*
+        Else we are scrolling up (i.e the previous scroll is greater than the current scroll), so show the nav.
+      */
+      } else {
+        window.setTimeout(showNav, 10);
+      }
+      /* 
+        Set the previous scroll value equal to the current scroll.
+      */
+      previousScroll = currentScroll;
+    }
+
+  });
+
+  function hideNav() {
+    $("[data-nav-status='toggle']").removeClass("show").addClass("hidden");
+  }
+  function showNav() {
+    $("[data-nav-status='toggle']").removeClass("hidden").addClass("show");
+  }
+});
+</script>
