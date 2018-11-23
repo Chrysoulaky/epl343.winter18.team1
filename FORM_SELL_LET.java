@@ -1,17 +1,17 @@
-package Project;
+package project361;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-import java.awt.Font;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 import javax.swing.JCheckBox;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JComponent;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -136,8 +136,9 @@ public class FORM_SELL_LET extends JFrame {
 		JButton button = new JButton("< Go Back");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Notifications nots2=new Notifications();
-				nots2.setVisible(true);
+				JComponent comp = (JComponent) e.getSource();
+				  java.awt.Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
 			}
 		});
 		button.setBounds(0, 277, 102, 23);

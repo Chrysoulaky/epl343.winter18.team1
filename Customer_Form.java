@@ -1,10 +1,9 @@
-package Project;
+package project361;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -12,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+import com.sun.glass.ui.Window;
 import java.awt.Font;
 import javax.swing.JComponent;
 import javax.swing.SwingUtilities;
@@ -55,7 +55,7 @@ public class Customer_Form extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				 JComponent comp = (JComponent) e.getSource();
-				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  java.awt.Window win = SwingUtilities.getWindowAncestor(comp);
 				  win.dispose();
 			}
 		});

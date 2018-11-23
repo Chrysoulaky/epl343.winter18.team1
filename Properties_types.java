@@ -1,8 +1,6 @@
-package Project;
+package project361;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -18,6 +16,7 @@ import javax.swing.SwingUtilities;
 
 public class Properties_types extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtFk;
 
@@ -47,66 +46,66 @@ public class Properties_types extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JButton button = new JButton("< Go Back");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JComponent comp = (JComponent) e.getSource();
-				  Window win = SwingUtilities.getWindowAncestor(comp);
-				  win.dispose();
+				java.awt.Window win = SwingUtilities.getWindowAncestor(comp);
+				win.dispose();
 			}
 		});
 		button.setBounds(0, 239, 109, 23);
 		contentPane.add(button);
-		
+
 		JLabel lblPropertyTypes = new JLabel("Property Types");
 		lblPropertyTypes.setFont(new Font("Tahoma", Font.BOLD, 16));
 		lblPropertyTypes.setBounds(141, 11, 132, 23);
 		contentPane.add(lblPropertyTypes);
-		
+
 		JButton button_1 = new JButton("< Go Back");
 		button_1.setBounds(-22, 291, 109, 23);
 		contentPane.add(button_1);
-		
+
 		JRadioButton radioButton = new JRadioButton("Appartment");
 		radioButton.setBounds(101, 56, 109, 23);
 		contentPane.add(radioButton);
-		
+
 		JRadioButton radioButton_1 = new JRadioButton("Building");
 		radioButton_1.setBounds(101, 82, 109, 23);
 		contentPane.add(radioButton_1);
-		
+
 		JRadioButton radioButton_2 = new JRadioButton("House");
 		radioButton_2.setSelected(true);
 		radioButton_2.setBounds(101, 108, 109, 23);
 		contentPane.add(radioButton_2);
-		
+
 		JRadioButton radioButton_3 = new JRadioButton("Plot/Land");
 		radioButton_3.setBounds(101, 135, 109, 23);
 		contentPane.add(radioButton_3);
-		
+
 		JRadioButton radioButton_4 = new JRadioButton("Store");
 		radioButton_4.setBounds(212, 82, 109, 23);
 		contentPane.add(radioButton_4);
-		
+
 		JRadioButton radioButton_5 = new JRadioButton("Storage Building");
 		radioButton_5.setBounds(212, 56, 138, 23);
 		contentPane.add(radioButton_5);
-		
+
 		JButton btnGo = new JButton("Go >");
 		btnGo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Properties pro_forms=new Properties();
+				Properties pro_forms = new Properties();
 				pro_forms.setVisible(true);
 			}
 		});
 		btnGo.setBounds(325, 239, 109, 23);
 		contentPane.add(btnGo);
-		
+
 		JLabel lblNewLabel = new JLabel("Plot Code:");
 		lblNewLabel.setBounds(101, 183, 70, 14);
 		contentPane.add(lblNewLabel);
-		
+
 		txtFk = new JTextField();
 		txtFk.setBounds(166, 180, 86, 20);
 		contentPane.add(txtFk);

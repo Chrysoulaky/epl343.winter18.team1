@@ -1,4 +1,4 @@
-package Project;
+package project361;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -11,6 +11,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
+
+import com.sun.glass.ui.Window;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -77,7 +80,7 @@ public class Delete_Article extends JFrame {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				 JComponent comp = (JComponent) e.getSource();
-				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  java.awt.Window win = SwingUtilities.getWindowAncestor(comp);
 				  win.dispose();
 			}
 		});

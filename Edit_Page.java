@@ -1,19 +1,21 @@
-package Project;
+package project361;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JRadioButton;
+import javax.swing.SwingUtilities;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JEditorPane;
 import java.awt.SystemColor;
+import com.sun.glass.ui.Window;
 
 public class Edit_Page extends JFrame {
 
@@ -81,23 +83,15 @@ public class Edit_Page extends JFrame {
 		lblEditWebpage.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
 		lblEditWebpage.setBounds(137, 11, 135, 23);
 		contentPane.add(lblEditWebpage);
-		
-		JButton button = new JButton("< Go Back");
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {		
-				Webpage adminP = new Webpage();		
-				adminP.setVisible(true);
-			}
-		});
-		button.setBounds(0, 238, 109, 23);
-		contentPane.add(button);
+	
 		
 		JButton btnNewButton_2 = new JButton("< Go Back");
 		btnNewButton_2.setBounds(0, 238, 109, 23);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {		
-				AdminPanel adminP = new AdminPanel();		
-				adminP.setVisible(true);
+				 JComponent comp = (JComponent) e.getSource();
+				  java.awt.Window win = SwingUtilities.getWindowAncestor(comp);
+				  win.dispose();
 			}
 		});
 		contentPane.add(btnNewButton_2);

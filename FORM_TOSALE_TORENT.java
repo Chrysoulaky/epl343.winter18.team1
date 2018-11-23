@@ -1,31 +1,22 @@
-package Project;
+package project361;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 import javax.swing.JCheckBox;
+import javax.swing.JComponent;
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.Color;
 
 public class FORM_TOSALE_TORENT extends JFrame {
 	
-
-
-
 		private JPanel contentPane;
 		private JTextField txtMaria;
 		private JTextField txtNicolaou;
@@ -125,10 +116,6 @@ public class FORM_TOSALE_TORENT extends JFrame {
 			textField_4.setBounds(91, 267, 132, 74);
 			contentPane.add(textField_4);
 			
-			//JButton btnNewButton = new JButton("< Go Back");
-			//btnNewButton.setBounds(0, 353, 102, 23);
-			//contentPane.add(btnNewButton);
-			
 			JLabel lblNewLabel_4 = new JLabel("27/12/2018 16:00");
 			lblNewLabel_4.setForeground(Color.RED);
 			lblNewLabel_4.setFont(new Font("Tahoma", Font.BOLD, 14));
@@ -146,8 +133,9 @@ public class FORM_TOSALE_TORENT extends JFrame {
 			contentPane.add(btnNewButton_1);
 			btnNewButton_1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {		
-					Notifications not = new Notifications();		
-					not.setVisible(true);
+					JComponent comp = (JComponent) e.getSource();
+					  java.awt.Window win = SwingUtilities.getWindowAncestor(comp);
+					  win.dispose();
 				}
 			});
 			

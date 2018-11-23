@@ -1,16 +1,17 @@
-package Project;
+package project361;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
+import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
 public class EmployeesForm extends JFrame {
@@ -51,12 +52,13 @@ public class EmployeesForm extends JFrame {
 		JButton btnNewButton = new JButton("< Go Back");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Information frame = new Information();
-				frame.setVisible(true);
+				 JComponent comp = (JComponent) e.getSource();
+				 java.awt.Window win = SwingUtilities.getWindowAncestor(comp);
+				 win.dispose();
 			}
 		});
-		contentPane.setLayout(null);
-		contentPane.setLayout(null);
+		//contentPane.setLayout(null);
+		//contentPane.setLayout(null);
 		contentPane.setLayout(null);
 		btnNewButton.setBounds(0, 239, 103, 23);
 		contentPane.add(btnNewButton);

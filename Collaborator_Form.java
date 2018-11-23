@@ -1,6 +1,5 @@
-package Project;
+package project361;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.Font;
 
@@ -17,6 +16,10 @@ import javax.swing.JComponent;
 import javax.swing.SwingUtilities;
 public class Collaborator_Form extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtJoulia;
 	private JTextField txtSvetlana;
@@ -56,8 +59,8 @@ public class Collaborator_Form extends JFrame {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				 JComponent comp = (JComponent) e.getSource();
-				  Window win = SwingUtilities.getWindowAncestor(comp);
-				  win.dispose();
+				 java.awt.Window win = SwingUtilities.getWindowAncestor(comp);
+				 win.dispose();
 			}
 		});
 		contentPane.setLayout(null);

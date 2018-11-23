@@ -1,8 +1,6 @@
-package Project;
+package project361;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -12,9 +10,6 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
-import javax.swing.JList;
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
 import javax.swing.JCheckBox;
@@ -24,6 +19,7 @@ import javax.swing.SwingUtilities;
 
 public class Properties extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField txtGeorge;
 	private JTextField textField;
@@ -65,7 +61,7 @@ public class Properties extends JFrame {
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JComponent comp = (JComponent) e.getSource();
-				  Window win = SwingUtilities.getWindowAncestor(comp);
+				  java.awt.Window win = SwingUtilities.getWindowAncestor(comp);
 				  win.dispose();
 			}
 		});

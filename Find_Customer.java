@@ -1,4 +1,4 @@
-package Project;
+package project361;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
@@ -9,7 +9,10 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
 import javax.swing.JButton;
+import javax.swing.JComponent;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -60,6 +63,10 @@ public class Find_Customer extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				Customer_Form custo=new Customer_Form();
 				custo.setVisible(true);
+				
+				JComponent comp = (JComponent) e.getSource();
+				java.awt.Window win = SwingUtilities.getWindowAncestor(comp);
+				win.dispose();
 			}
 		});
 		btnOk.setBounds(58, 83, 89, 23);
