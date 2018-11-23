@@ -137,6 +137,13 @@ public class Login {
 
 					adminPanel.setVisible(true);
 
+				} else if (uname.equals("Employee1") && pad.equals("5678")) {
+					JOptionPane.showMessageDialog(frame, "You are sucessfully logined!!");
+					AdminPanel adminPanel = new AdminPanel();
+					frame.dispose();
+
+					adminPanel.setVisible(true);
+
 				} else {
 					JOptionPane.showMessageDialog(frame, "Invalid username or password!!");
 				}
