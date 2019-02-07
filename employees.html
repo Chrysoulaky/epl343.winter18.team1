@@ -353,31 +353,15 @@ a.socialIcon:hover, .socialHoverClass {
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="form_name">Firstname</label>
-                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Name " >
+                                        <label for="form_name">Firstname *</label>
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Maria" required="required" data-error="Firstname is required.">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="form_lastname">Lastname</label>
-                                        <input id="form_lastname" type="text" name="Lastname" class="form-control" placeholder="Lastname">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                            </div>
-                              <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form_name">Address</label>
-                                        <input id="form_name" type="text" name="address" class="form-control" placeholder="Address">
-                                        <div class="help-block with-errors"></div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="form_lastname">Email</label>
-                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Email">
+                                        <label for="form_lastname">Lastname *</label>
+                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Nicolaou" required="required" data-error="Lastname is required.">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -385,74 +369,66 @@ a.socialIcon:hover, .socialHoverClass {
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="form_email">Phone number</label>
-                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Phone number">
+                                        <label for="form_email">Email *</label>
+                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="mnicol17@cs.ucy.ac.cy" required="required" data-error="Valid email is required.">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="form_phone">Salary</label>
-                                        <input id="form_phone" type="tel" name="phone"  class="form-control" placeholder="Salary")"
+                                        <label for="form_phone">Phone *</label>
+                                        <input id="form_phone" type="tel" name="phone"  class="form-control" placeholder="99123456" required oninvalid="setCustomValidity('Plz enter your correct phone number ')"
     onchange="try{setCustomValidity('')}catch(e){}">
                                         
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                  <div class="btn-group">
-                                    <input type="submit" class="btn btn-black" value="Add" style="font-size: 20px; background: transparent; border-color: white;">
-                                     <input type="submit" class="btn btn-black" value="Delete" style="font-size: 20px; background: transparent; border-color: white;">
+                           <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Address *</label>
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="my address" required="required" data-error="Firstname is required.">
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
-                          </div>
-                          <div class="allo" style="margin-left: 100%; margin-top: 0px;">
-                            <div class="row">
-                                <div class="col-md-12">
-                                  <div class="btn-group">
-                                    <input type="submit" class="btn btn-black" value="Rights" style="font-size: 20px; background: transparent; border-color: white;">
-                                     <input type="submit" class="btn btn-black" value="Search" style="font-size: 20px; background: transparent; border-color: white;">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_lastname">Salary *</label>
+                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="1000" required="required" data-error="Lastname is required.">
+                                        <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                             </div>
-                          </div>
-<style>
-.btn-group button {
-  style="font-size: 20px; 
-  background: transparent; 
-  border-color: white;"
-  
-}
-</style>
 
 
 
-                             <!-- <div class="row">
-                                 <div class="col-md-12">
-                                  <div class="btn-group">
-                                    <input type="submit" class="btn btn-black" value="Rights" >
-                                     <input type="submit" class="btn btn-black" value="Search" style="font-size: 20px; background: transparent; border-color: white;">
-                                    </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-black" value="Add" style="font-size: 20px; background: transparent; border-color: white; width: 20%;">
+                                    &nbsp;  &nbsp;
+                                    <input type="submit" class="btn btn-black" value="Delete" style="font-size: 20px; background: transparent; border-color: white;width: 20%;">
+                                     &nbsp;  &nbsp;
+                                     <input type="submit" class="btn btn-black" value="Edit" style="font-size: 20px; background: transparent; border-color: white;width: 20%;">
                                 </div>
-                          </div>
+                            </div>
+                        </div>
 
--->
-
-                       
                     </form>
     
                </div>
                <div class="col-sm-5" style="margin-top: 50px; font-size: 19px;">
                    <div class="row col1">
-                       
-                      
+                       <div class="col-sm-3">
+                             <input type="submit" class="btn btn-black" value="Rights" style="font-size: 20px; background: transparent; border-color: white;">
+                                    
+                       </div>
                    </div>
-                   
-                    <div class="row col1"> 
-                    </div>
-                    <div class="row col1">  
-                    </div>
+                   <div class="row col1" style="padding-top: 50px;">
+                       <div class="col-sm-3">
+                             <input type="submit" class="btn btn-black" value="Search" style="font-size: 20px; background: transparent; border-color: white;">
+                                    
+                       </div>
+                   </div>
                </div>
            </div>
            
@@ -463,19 +439,3 @@ a.socialIcon:hover, .socialHoverClass {
 	
 
 </body>
-
-<script>
-	$(document).ready(function(){
-
-    $(".dropdown").hover(            
-        function() {
-            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("400");
-            $(this).toggleClass('open');        
-        },
-        function() {
-            $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("400");
-            $(this).toggleClass('open');       
-        }
-    );
-});
-</script>
