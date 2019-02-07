@@ -162,15 +162,12 @@
       -webkit-animation-duration: 1s;
       visibility: visible;
   }
-
   .form-control{
 		display: unset;
 	}
-
 	a {
     background-color: #f4511e;
 	}
-
   @keyframes slide {
     0% {
       opacity: 0;
@@ -206,7 +203,6 @@
         font-size: 150px;
     }
   }
-
   /*--------*/
 
   	input[type="radio"],
@@ -217,11 +213,7 @@
 	}
 
 	.form-control{
-
 	}
-
-
-
 /*=========================
   Icons
  ================= */
@@ -237,8 +229,6 @@ ul.social-network li {
 	display: inline;
 	margin: 0 5px;
 }
-
-
 /* footer social icons */
 .social-network a.icoRss:hover {
 	background-color: #F56505;
@@ -265,7 +255,6 @@ ul.social-network li {
 a.socialIcon:hover, .socialHoverClass {
 	color:#44BCDD;
 }
-
 .social-circle li a {
 	display:inline-block;
 	position:relative;
@@ -283,7 +272,6 @@ a.socialIcon:hover, .socialHoverClass {
 	line-height:50px;
 	text-align: center;
 }
-
 .social-circle li a:hover i, .triggeredHover {
 	-moz-transform: rotate(360deg);
 	-webkit-transform: rotate(360deg);
@@ -303,12 +291,6 @@ a.socialIcon:hover, .socialHoverClass {
 	-ms-transition: all 0.8s;
 	transition: all 0.8s;
 }
-
-/*a {
- background-color: #D3D3D3;   
-}*/
-
-
   </style>
 
 <body>
@@ -332,7 +314,6 @@ a.socialIcon:hover, .socialHoverClass {
                             <li><a href="sell-rent.html">SELL / LET</a></li>
                         </ul>
                     </li>
-
                     <li><a href="about_us.html">ABOUT US</a></li>
                     <li onclick="contact()"><a href="contact-us_new.html">CONTACT US</a></li>
                     <li><a href="news.html">NEWS</a></li>
@@ -356,8 +337,7 @@ a.socialIcon:hover, .socialHoverClass {
                                         <div class="form-group">
                                             <label for="form_name">Firstname *</label>
                                             <input id="form_name" type="text" name="name" class="form-control"
-                                                placeholder="Pavlina" required="required"
-                                                data-error="Firstname is required.">
+                                                placeholder="Pavlina" required="required" data-error="Firstname is required.">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -365,8 +345,7 @@ a.socialIcon:hover, .socialHoverClass {
                                         <div class="form-group">
                                             <label for="form_lastname">Lastname *</label>
                                             <input id="form_lastname" type="text" name="surname" class="form-control"
-                                                placeholder="Kyriacou" required="required"
-                                                data-error="Lastname is required.">
+                                                placeholder="Kyriacou" required="required" data-error="Lastname is required.">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
@@ -386,7 +365,6 @@ a.socialIcon:hover, .socialHoverClass {
                                             <input id="form_phone" type="tel" name="phone" class="form-control"
                                                 placeholder="0035799990000" required oninvalid="setCustomValidity('Plz enter your correct phone number ')"
                                                 onchange="try{setCustomValidity('')}catch(e){}">
-
                                         </div>
                                     </div>
                                 </div>
@@ -395,54 +373,26 @@ a.socialIcon:hover, .socialHoverClass {
                                         <div class="form-group">
                                             <label for="form_email">Address *</label>
                                             <input id="form_email" type="email" name="email" class="form-control"
-                                                placeholder="My address 8, Nicosia, Cyprus" required="required" data-error="Valid email is required.">
+                                                placeholder="My address 8, Nicosia, Cyprus" required="required"
+                                                data-error="Valid email is required.">
                                             <div class="help-block with-errors"></div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <input type="submit" class="btn btn-black" value="Add" style="font-size: 20px; background: transparent; border-color: white;">
+                                        <input type="submit" class="btn btn-black" value="Add" style="font-size: 20px; background: transparent; border-color: white; width: 20%;">
                                         &nbsp; &nbsp;
-                                        <input type="submit" class="btn btn-black" value="Delete" style="font-size: 20px; background: transparent; border-color: white;">
+                                        <input type="submit" class="btn btn-black" value="Delete" style="font-size: 20px; background: transparent; border-color: white; width: 20%;">
                                         &nbsp; &nbsp;
-                                        <input type="submit" class="btn btn-black" value="Next" style="font-size: 20px; background: transparent; border-color: white;">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <br>
-                                        <small class="text-muted" style="color: white;"><strong>*</strong> These fields
-                                            are required.</small>
+                                        <input type="submit" class="btn btn-black" value="Next" style="font-size: 20px; background: transparent; border-color: white; width: 20%;">
                                     </div>
                                 </div>
                             </div>
-
                         </form>
-
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
-
-
 </body>
-
-<script>
-    $(document).ready(function () {
-
-        $(".dropdown").hover(
-            function () {
-                $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideDown("400");
-                $(this).toggleClass('open');
-            },
-            function () {
-                $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideUp("400");
-                $(this).toggleClass('open');
-            }
-        );
-    });
-</script>

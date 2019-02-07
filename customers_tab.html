@@ -162,15 +162,12 @@
       -webkit-animation-duration: 1s;
       visibility: visible;
   }
-
   .form-control{
 		display: unset;
 	}
-
 	a {
     background-color: #f4511e;
 	}
-
   @keyframes slide {
     0% {
       opacity: 0;
@@ -206,7 +203,6 @@
         font-size: 150px;
     }
   }
-
   /*--------*/
 
   	input[type="radio"],
@@ -219,9 +215,6 @@
 	.form-control{
 
 	}
-
-
-
 /*=========================
   Icons
  ================= */
@@ -237,8 +230,6 @@ ul.social-network li {
 	display: inline;
 	margin: 0 5px;
 }
-
-
 /* footer social icons */
 .social-network a.icoRss:hover {
 	background-color: #F56505;
@@ -265,7 +256,6 @@ ul.social-network li {
 a.socialIcon:hover, .socialHoverClass {
 	color:#44BCDD;
 }
-
 .social-circle li a {
 	display:inline-block;
 	position:relative;
@@ -283,7 +273,6 @@ a.socialIcon:hover, .socialHoverClass {
 	line-height:50px;
 	text-align: center;
 }
-
 .social-circle li a:hover i, .triggeredHover {
 	-moz-transform: rotate(360deg);
 	-webkit-transform: rotate(360deg);
@@ -303,13 +292,7 @@ a.socialIcon:hover, .socialHoverClass {
 	-ms-transition: all 0.8s;
 	transition: all 0.8s;
 }
-
-/*a {
- background-color: #D3D3D3;   
-}*/
-
-
-  </style>
+</style>
 
 <body>
     <nav class="navbar navbar-default navbar-fixed-top" style="height: 80px;">
@@ -332,20 +315,16 @@ a.socialIcon:hover, .socialHoverClass {
                             <li><a href="sell-rent.html">SELL / LET</a></li>
                         </ul>
                     </li>
-
                     <li><a href="about_us.html">ABOUT US</a></li>
                     <li onclick="contact()"><a href="contact-us_new.html">CONTACT US</a></li>
                     <li><a href="news.html">NEWS</a></li>
                 </ul>
             </div>
-
         </div>
     </nav>
-
     <div class="contact" id="contact" style="font-family: Calibri;">
         <div class="container-fluid">
             <div class="contact-form" style="margin-top:200px;">
-                <!--style=" position:fixed; top:50%; left: 50%; transform: translate(-50%, -50%);"-->
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="center" style=" margin-left: 70%; width: 100%; padding: 10px;">
@@ -367,7 +346,7 @@ a.socialIcon:hover, .socialHoverClass {
                                     </div>
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <input type="submit" id="search" class="btn btn-black" value="Search" style=" font-size: 20px; background: transparent; border-color: white;">
+                                            <input type="submit" id="search" class="btn btn-black" value="Search" style=" font-size: 20px; background: transparent; border-color: white; width: 20%;">
                                         </div>
                                     </div>
                             </form>
@@ -377,27 +356,4 @@ a.socialIcon:hover, .socialHoverClass {
             </div>
         </div>
     </div>
-
-<script>
-    function myFunction() {
-        document.getElementById("search") ;
-    }
-</script>
-
 </body>
-
-<script>
-    $(document).ready(function () {
-
-        $(".dropdown").hover(
-            function () {
-                $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideDown("400");
-                $(this).toggleClass('open');
-            },
-            function () {
-                $('.dropdown-menu', this).not('.in .dropdown-menu').stop(true, true).slideUp("400");
-                $(this).toggleClass('open');
-            }
-        );
-    });
-</script>
